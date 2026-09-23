@@ -1,0 +1,110 @@
+package com.google.android.gms.internal.ads;
+
+import com.google.android.gms.ads.RequestConfiguration;
+
+/* loaded from: classes.dex */
+public final class zzavc extends zziar implements zzicd {
+    private static final zzavc zzo;
+    private static volatile zzick zzp;
+    private int zza;
+    private long zzc;
+    private long zzg;
+    private long zzh;
+    private long zzj;
+    private int zzn;
+    private String zzb = RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED;
+    private String zzd = RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED;
+    private String zze = RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED;
+    private String zzf = RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED;
+    private String zzi = RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED;
+    private String zzk = RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED;
+    private String zzl = RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED;
+    private zzibd zzm = zzicn.i;
+
+    static {
+        zzavc zzavcVar = new zzavc();
+        zzo = zzavcVar;
+        zziar.x(zzavc.class, zzavcVar);
+    }
+
+    public static zzauy D() {
+        return (zzauy) zzo.u();
+    }
+
+    public final /* synthetic */ void E(String str) {
+        str.getClass();
+        this.zza |= 1;
+        this.zzb = str;
+    }
+
+    public final /* synthetic */ void F(long j) {
+        this.zza |= 2;
+        this.zzc = j;
+    }
+
+    public final /* synthetic */ void G(String str) {
+        str.getClass();
+        this.zza |= 4;
+        this.zzd = str;
+    }
+
+    public final /* synthetic */ void H(String str) {
+        this.zza |= 8;
+        this.zze = str;
+    }
+
+    public final /* synthetic */ void I(String str) {
+        this.zza |= 16;
+        this.zzf = str;
+    }
+
+    public final /* synthetic */ void J(String str) {
+        this.zza |= 1024;
+        this.zzl = str;
+    }
+
+    public final /* synthetic */ void K(int i) {
+        this.zzn = i - 1;
+        this.zza |= 2048;
+    }
+
+    @Override // com.google.android.gms.internal.ads.zziar
+    public final Object y(zziaq zziaqVar, zziar zziarVar) {
+        zzick zzickVar;
+        int ordinal = zziaqVar.ordinal();
+        if (ordinal != 0) {
+            if (ordinal != 2) {
+                if (ordinal != 3) {
+                    if (ordinal != 4) {
+                        if (ordinal != 5) {
+                            if (ordinal == 6) {
+                                zzick zzickVar2 = zzp;
+                                if (zzickVar2 == null) {
+                                    synchronized (zzavc.class) {
+                                        try {
+                                            zzickVar = zzp;
+                                            if (zzickVar == null) {
+                                                zzickVar = new zziam(zzo);
+                                                zzp = zzickVar;
+                                            }
+                                        } catch (Throwable th) {
+                                            throw th;
+                                        }
+                                    }
+                                    return zzickVar;
+                                }
+                                return zzickVar2;
+                            }
+                            throw null;
+                        }
+                        return zzo;
+                    }
+                    return new zzial(zzo);
+                }
+                return new zzavc();
+            }
+            return new zzico(zzo, "\u0004\r\u0000\u0001\u0001\r\r\u0000\u0001\u0000\u0001ဈ\u0000\u0002ဂ\u0001\u0003ဈ\u0002\u0004ဈ\u0003\u0005ဈ\u0004\u0006ဂ\u0005\u0007ဂ\u0006\bဈ\u0007\tဂ\b\nဈ\t\u000bဈ\n\f\u001b\r᠌\u000b", new Object[]{"zza", "zzb", "zzc", "zzd", "zze", "zzf", "zzg", "zzh", "zzi", "zzj", "zzk", "zzl", "zzm", zzava.class, "zzn", zzavb.f4433a});
+        }
+        return (byte) 1;
+    }
+}

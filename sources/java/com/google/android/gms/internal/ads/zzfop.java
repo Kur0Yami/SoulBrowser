@@ -1,0 +1,54 @@
+package com.google.android.gms.internal.ads;
+
+/* loaded from: classes.dex */
+public final class zzfop extends zziar implements zzicd {
+    private static final zzfop zzb;
+    private static volatile zzick zzc;
+    private zzibd zza = zzicn.i;
+
+    static {
+        zzfop zzfopVar = new zzfop();
+        zzb = zzfopVar;
+        zziar.x(zzfop.class, zzfopVar);
+    }
+
+    @Override // com.google.android.gms.internal.ads.zziar
+    public final Object y(zziaq zziaqVar, zziar zziarVar) {
+        zzick zzickVar;
+        int ordinal = zziaqVar.ordinal();
+        if (ordinal != 0) {
+            if (ordinal != 2) {
+                if (ordinal != 3) {
+                    if (ordinal != 4) {
+                        if (ordinal != 5) {
+                            if (ordinal == 6) {
+                                zzick zzickVar2 = zzc;
+                                if (zzickVar2 == null) {
+                                    synchronized (zzfop.class) {
+                                        try {
+                                            zzickVar = zzc;
+                                            if (zzickVar == null) {
+                                                zzickVar = new zziam(zzb);
+                                                zzc = zzickVar;
+                                            }
+                                        } catch (Throwable th) {
+                                            throw th;
+                                        }
+                                    }
+                                    return zzickVar;
+                                }
+                                return zzickVar2;
+                            }
+                            throw null;
+                        }
+                        return zzb;
+                    }
+                    return new zzial(zzb);
+                }
+                return new zzfop();
+            }
+            return new zzico(zzb, "\u0004\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b", new Object[]{"zza", zzfon.class});
+        }
+        return (byte) 1;
+    }
+}

@@ -1,0 +1,102 @@
+.class Lcom/mycompany/app/dialog/DialogEditorPen$3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
+
+
+# instance fields
+.field public final synthetic a:Lcom/mycompany/app/dialog/DialogEditorPen;
+
+
+# direct methods
+.method public constructor <init>(Lcom/mycompany/app/dialog/DialogEditorPen;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lcom/mycompany/app/dialog/DialogEditorPen$3;->a:Lcom/mycompany/app/dialog/DialogEditorPen;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    .locals 0
+
+    .line 1
+    iget-object p2, p0, Lcom/mycompany/app/dialog/DialogEditorPen$3;->a:Lcom/mycompany/app/dialog/DialogEditorPen;
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Landroid/widget/ProgressBar;->getProgress()I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p1
+
+    .line 7
+    invoke-static {p2, p1}, Lcom/mycompany/app/dialog/DialogEditorPen;->C(Lcom/mycompany/app/dialog/DialogEditorPen;I)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final onStartTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/mycompany/app/dialog/DialogEditorPen$3;->a:Lcom/mycompany/app/dialog/DialogEditorPen;
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Landroid/widget/ProgressBar;->getProgress()I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p1
+
+    .line 7
+    invoke-static {v0, p1}, Lcom/mycompany/app/dialog/DialogEditorPen;->C(Lcom/mycompany/app/dialog/DialogEditorPen;I)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final onStopTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/mycompany/app/dialog/DialogEditorPen$3;->a:Lcom/mycompany/app/dialog/DialogEditorPen;
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Landroid/widget/ProgressBar;->getProgress()I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p1
+
+    .line 7
+    invoke-static {v0, p1}, Lcom/mycompany/app/dialog/DialogEditorPen;->C(Lcom/mycompany/app/dialog/DialogEditorPen;I)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method

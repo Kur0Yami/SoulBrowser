@@ -1,0 +1,54 @@
+# Build outputs
+dist/
+app/build/
+app/res/drawable-*-xhdpi*/
+app/res/drawable-xhdpi*/
+*.apk
+!splits/*.apk
+*.ap_
+*.dex
+!original-dex/*.dex
+*.class
+
+# Local tooling
+tools/
+apk/
+decompiled/
+__pycache__/
+
+# Generated bundled OCR working dir (scripts/prepare-bundled-ocr.sh)
+bundled-ocr/
+
+# Ignored for local git add/status; prebuilts remain in the repo (CI updates with git add -f).
+bundled-warp/lib/
+
+# UI translations downloaded at build time by scripts/sync-i18n.py
+app/res/.i18n-sync
+app/res/values-??/
+app/res/values-???/
+app/res/values-??-r*/
+app/res/values-???-r*/
+# Ignored for local git add/status; file remains in the repo (CI updates with git add -f).
+app/res/xml/locales_config.xml
+
+# Generated at build time (scripts/build.sh / prepare-info-string.py)
+app/res/values/build_date.xml
+app/res/values/soul2_info.xml
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Signing material must never be committed (CI injects release key via secrets)
+keystore/
+# Ignore signing keystores but keep app-bundled resources from decompilation
+*.jks
+!app/unknown/**/*.jks
+
+# Logs
+*.log

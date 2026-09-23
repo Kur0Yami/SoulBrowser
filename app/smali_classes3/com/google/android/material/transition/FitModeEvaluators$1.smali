@@ -1,0 +1,151 @@
+.class Lcom/google/android/material/transition/FitModeEvaluators$1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/material/transition/FitModeEvaluator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/transition/FitModeEvaluators;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# virtual methods
+.method public final a(FFFFFFF)Lcom/google/android/material/transition/FitModeResult;
+    .locals 6
+
+    .line 1
+    const/4 v5, 0x1
+
+    .line 2
+    move v4, p1
+
+    .line 3
+    move v2, p2
+
+    .line 4
+    move v3, p3
+
+    .line 5
+    move v0, p4
+
+    .line 6
+    move v1, p6
+
+    .line 7
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/transition/TransitionUtils;->d(FFFFFZ)F
+
+    .line 8
+    .line 9
+    .line 10
+    move-result p4
+
+    .line 11
+    div-float p2, p4, v0
+
+    .line 12
+    .line 13
+    div-float p3, p4, v1
+
+    .line 14
+    .line 15
+    mul-float/2addr p5, p2
+
+    .line 16
+    mul-float/2addr p7, p3
+
+    .line 17
+    new-instance p1, Lcom/google/android/material/transition/FitModeResult;
+
+    .line 18
+    .line 19
+    move p6, p4
+
+    .line 20
+    invoke-direct/range {p1 .. p7}, Lcom/google/android/material/transition/FitModeResult;-><init>(FFFFFF)V
+
+    .line 21
+    .line 22
+    .line 23
+    return-object p1
+.end method
+
+.method public final b(Lcom/google/android/material/transition/FitModeResult;)Z
+    .locals 1
+
+    .line 1
+    iget v0, p1, Lcom/google/android/material/transition/FitModeResult;->d:F
+
+    .line 2
+    .line 3
+    iget p1, p1, Lcom/google/android/material/transition/FitModeResult;->f:F
+
+    .line 4
+    .line 5
+    cmpl-float p1, v0, p1
+
+    .line 6
+    .line 7
+    if-lez p1, :cond_0
+
+    .line 8
+    .line 9
+    const/4 p1, 0x1
+
+    .line 10
+    return p1
+
+    .line 11
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 12
+    return p1
+.end method
+
+.method public final c(Landroid/graphics/RectF;FLcom/google/android/material/transition/FitModeResult;)V
+    .locals 1
+
+    .line 1
+    iget v0, p3, Lcom/google/android/material/transition/FitModeResult;->f:F
+
+    .line 2
+    .line 3
+    iget p3, p3, Lcom/google/android/material/transition/FitModeResult;->d:F
+
+    .line 4
+    .line 5
+    sub-float/2addr v0, p3
+
+    .line 6
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    .line 7
+    .line 8
+    .line 9
+    move-result p3
+
+    .line 10
+    iget v0, p1, Landroid/graphics/RectF;->bottom:F
+
+    .line 11
+    .line 12
+    mul-float/2addr p3, p2
+
+    .line 13
+    sub-float/2addr v0, p3
+
+    .line 14
+    iput v0, p1, Landroid/graphics/RectF;->bottom:F
+
+    .line 15
+    .line 16
+    return-void
+.end method

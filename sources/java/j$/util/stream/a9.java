@@ -1,0 +1,32 @@
+package j$.util.stream;
+
+import java.util.function.DoublePredicate;
+
+/* loaded from: classes2.dex */
+public final class a9 extends g5 {
+    public final boolean b;
+
+    public a9(b9 b9Var, n5 n5Var) {
+        super(n5Var);
+        this.b = true;
+    }
+
+    @Override // j$.util.stream.g5, j$.util.stream.n5
+    public final void c(long j) {
+        this.f21426a.c(-1L);
+    }
+
+    @Override // j$.util.stream.k5, j$.util.stream.n5, java.util.function.DoubleConsumer
+    public final void accept(double d) {
+        if (this.b) {
+            DoublePredicate doublePredicate = null;
+            doublePredicate.test(d);
+            throw null;
+        }
+    }
+
+    @Override // j$.util.stream.g5, j$.util.stream.n5
+    public final boolean e() {
+        return !this.b || this.f21426a.e();
+    }
+}

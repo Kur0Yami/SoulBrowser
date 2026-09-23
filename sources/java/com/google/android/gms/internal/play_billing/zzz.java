@@ -1,0 +1,9 @@
+package com.google.android.gms.internal.play_billing;
+
+import android.os.Bundle;
+import android.os.IInterface;
+
+/* loaded from: classes3.dex */
+public interface zzz extends IInterface {
+    void b(Bundle bundle);
+}

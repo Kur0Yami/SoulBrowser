@@ -1,0 +1,38 @@
+package com.google.android.gms.internal.cast;
+
+/* loaded from: classes.dex */
+public final class zzvz extends zzyd implements zzzj {
+    private static final zzvz zzg;
+    private int zzb;
+    private int zzd;
+    private int zze;
+    private long zzf;
+
+    /* JADX WARN: Type inference failed for: r0v0, types: [com.google.android.gms.internal.cast.zzyd, com.google.android.gms.internal.cast.zzvz] */
+    static {
+        ?? zzydVar = new zzyd();
+        zzg = zzydVar;
+        zzyd.h(zzvz.class, zzydVar);
+    }
+
+    @Override // com.google.android.gms.internal.cast.zzyd
+    public final Object j(int i, zzyd zzydVar) {
+        int i2 = i - 1;
+        if (i2 != 0) {
+            if (i2 != 2) {
+                if (i2 != 3) {
+                    if (i2 != 4) {
+                        if (i2 == 5) {
+                            return zzg;
+                        }
+                        throw null;
+                    }
+                    return new zzya(zzg);
+                }
+                return new zzyd();
+            }
+            return new zzzr(zzg, "\u0001\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001᠌\u0000\u0002င\u0001\u0003ဂ\u0002", new Object[]{"zzb", "zzd", zzpn.f9825a, "zze", "zzf"});
+        }
+        return (byte) 1;
+    }
+}

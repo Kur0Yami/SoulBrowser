@@ -1,0 +1,17 @@
+package com.bumptech.glide.signature;
+
+import com.bumptech.glide.load.Key;
+import java.security.MessageDigest;
+
+/* loaded from: classes.dex */
+public final class EmptySignature implements Key {
+    public static final EmptySignature b = new Object();
+
+    @Override // com.bumptech.glide.load.Key
+    public final void a(MessageDigest messageDigest) {
+    }
+
+    public final String toString() {
+        return "EmptySignature";
+    }
+}

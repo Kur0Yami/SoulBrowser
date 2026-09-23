@@ -1,0 +1,29 @@
+package androidx.activity;
+
+import android.content.res.Resources;
+import com.google.android.gms.ads.RequestConfiguration;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+@Metadata(d1 = {"\u0000\u0010\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"<anonymous>", RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED, "resources", "Landroid/content/res/Resources;", "invoke", "(Landroid/content/res/Resources;)Ljava/lang/Boolean;"}, k = 3, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes.dex */
+final class SystemBarStyle$Companion$auto$1 extends Lambda implements Function1<Resources, Boolean> {
+    static {
+        new Lambda(1);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public final Boolean invoke(Resources resources) {
+        boolean z;
+        Resources resources2 = resources;
+        Intrinsics.checkNotNullParameter(resources2, "resources");
+        if ((resources2.getConfiguration().uiMode & 48) == 32) {
+            z = true;
+        } else {
+            z = false;
+        }
+        return Boolean.valueOf(z);
+    }
+}

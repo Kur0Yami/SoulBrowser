@@ -1,0 +1,143 @@
+.class Lcom/mycompany/app/wview/WebDownView$EventHandler;
+.super Landroid/os/Handler;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mycompany/app/wview/WebDownView;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "EventHandler"
+.end annotation
+
+
+# instance fields
+.field public final a:Ljava/lang/ref/WeakReference;
+
+
+# direct methods
+.method public constructor <init>(Lcom/mycompany/app/wview/WebDownView;)V
+    .locals 1
+
+    .line 1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    .line 6
+    .line 7
+    .line 8
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    .line 9
+    .line 10
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    .line 11
+    .line 12
+    .line 13
+    iput-object v0, p0, Lcom/mycompany/app/wview/WebDownView$EventHandler;->a:Ljava/lang/ref/WeakReference;
+
+    .line 14
+    .line 15
+    return-void
+.end method
+
+
+# virtual methods
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/mycompany/app/wview/WebDownView$EventHandler;->a:Ljava/lang/ref/WeakReference;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    check-cast v0, Lcom/mycompany/app/wview/WebDownView;
+
+    .line 8
+    .line 9
+    if-nez v0, :cond_0
+
+    .line 10
+    .line 11
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    iget p1, p1, Landroid/os/Message;->what:I
+
+    .line 13
+    .line 14
+    if-eqz p1, :cond_1
+
+    .line 15
+    .line 16
+    goto :goto_0
+
+    .line 17
+    :cond_1
+    iget-boolean p1, v0, Lcom/mycompany/app/wview/WebDownView;->a0:Z
+
+    .line 18
+    .line 19
+    if-eqz p1, :cond_2
+
+    .line 20
+    .line 21
+    goto :goto_0
+
+    .line 22
+    :cond_2
+    iget-boolean p1, v0, Lcom/mycompany/app/wview/WebDownView;->c:Z
+
+    .line 23
+    .line 24
+    if-nez p1, :cond_3
+
+    .line 25
+    .line 26
+    goto :goto_0
+
+    .line 27
+    :cond_3
+    iget-boolean p1, v0, Lcom/mycompany/app/wview/WebDownView;->H:Z
+
+    .line 28
+    .line 29
+    if-eqz p1, :cond_4
+
+    .line 30
+    .line 31
+    :goto_0
+    return-void
+
+    .line 32
+    :cond_4
+    const/4 p1, 0x1
+
+    .line 33
+    invoke-virtual {v0, p1}, Lcom/mycompany/app/wview/WebDownView;->i(Z)V
+
+    .line 34
+    .line 35
+    .line 36
+    return-void
+.end method

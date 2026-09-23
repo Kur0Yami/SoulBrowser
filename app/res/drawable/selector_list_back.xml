@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/white_pre"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask" android:drawable="@color/white" />
+    <item>
+        <selector>
+            <item android:drawable="@color/white_sel" android:state_activated="true" />
+            <item android:drawable="@color/white" />
+        </selector>
+    </item>
+</ripple>

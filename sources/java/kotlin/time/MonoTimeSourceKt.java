@@ -1,0 +1,11 @@
+package kotlin.time;
+
+import com.google.android.gms.ads.RequestConfiguration;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000\b\n\u0000\n\u0002\u0010\t\n\u0000*\f\b\u0000\u0010\u0000\"\u00020\u00012\u00020\u0001¨\u0006\u0002"}, d2 = {"ValueTimeMarkReading", RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED, "kotlin-stdlib"}, k = 2, mv = {2, 2, 0}, xi = 48)
+/* loaded from: classes4.dex */
+public final class MonoTimeSourceKt {
+    public static /* synthetic */ void ValueTimeMarkReading$annotations() {
+    }
+}

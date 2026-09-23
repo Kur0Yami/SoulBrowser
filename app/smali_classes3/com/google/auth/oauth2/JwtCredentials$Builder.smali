@@ -1,0 +1,24 @@
+.class public Lcom/google/auth/oauth2/JwtCredentials$Builder;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/auth/oauth2/JwtCredentials;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Builder"
+.end annotation
+
+
+# instance fields
+.field public a:Ljava/security/PrivateKey;
+
+.field public b:Lcom/google/auth/oauth2/JwtClaims;
+
+.field public c:Lcom/google/api/client/util/Clock;
+
+.field public d:Ljava/lang/Long;

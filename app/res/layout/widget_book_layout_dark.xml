@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/round_widget_book_d" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:scrollbarThumbVertical="@color/dark_scroll" android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+    <ImageView android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@null" android:scaleType="centerInside" />
+</FrameLayout>

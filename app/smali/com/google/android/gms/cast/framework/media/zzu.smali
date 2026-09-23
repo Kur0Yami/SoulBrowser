@@ -1,0 +1,150 @@
+.class final Lcom/google/android/gms/cast/framework/media/zzu;
+.super Lcom/google/android/gms/cast/framework/media/zzbc;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic d:Lcom/google/android/gms/cast/framework/media/RemoteMediaClient;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/cast/framework/media/RemoteMediaClient;)V
+    .locals 1
+
+    .line 1
+    invoke-static {p1}, Lj$/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lcom/google/android/gms/cast/framework/media/zzu;->d:Lcom/google/android/gms/cast/framework/media/RemoteMediaClient;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/cast/framework/media/zzbc;-><init>(Lcom/google/android/gms/cast/framework/media/RemoteMediaClient;Z)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 9
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/cast/framework/media/zzu;->d:Lcom/google/android/gms/cast/framework/media/RemoteMediaClient;
+
+    .line 2
+    .line 3
+    iget-object v0, v0, Lcom/google/android/gms/cast/framework/media/RemoteMediaClient;->c:Lcom/google/android/gms/cast/internal/zzar;
+
+    .line 4
+    .line 5
+    invoke-virtual {p0}, Lcom/google/android/gms/cast/framework/media/zzbc;->b()Lcom/google/android/gms/cast/internal/zzat;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
+
+    .line 9
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 10
+    .line 11
+    .line 12
+    new-instance v2, Lorg/json/JSONObject;
+
+    .line 13
+    .line 14
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-virtual {v0}, Lcom/google/android/gms/cast/internal/zzq;->b()J
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-wide v3
+
+    .line 21
+    :try_start_0
+    const-string v5, "requestId"
+
+    .line 22
+    .line 23
+    invoke-virtual {v2, v5, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 24
+    .line 25
+    .line 26
+    const-string v5, "type"
+
+    .line 27
+    .line 28
+    const-string v6, "GET_STATUS"
+
+    .line 29
+    .line 30
+    invoke-virtual {v2, v5, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 31
+    .line 32
+    .line 33
+    iget-object v5, v0, Lcom/google/android/gms/cast/internal/zzar;->f:Lcom/google/android/gms/cast/MediaStatus;
+
+    .line 34
+    .line 35
+    if-eqz v5, :cond_0
+
+    .line 36
+    .line 37
+    const-string v6, "mediaSessionId"
+
+    .line 38
+    .line 39
+    iget-wide v7, v5, Lcom/google/android/gms/cast/MediaStatus;->f:J
+
+    .line 40
+    .line 41
+    invoke-virtual {v2, v6, v7, v8}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 42
+    .line 43
+    .line 44
+    :catch_0
+    :cond_0
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v2
+
+    .line 48
+    invoke-virtual {v0, v3, v4, v2}, Lcom/google/android/gms/cast/internal/zzq;->a(JLjava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    iget-object v0, v0, Lcom/google/android/gms/cast/internal/zzar;->q:Lcom/google/android/gms/cast/internal/zzav;
+
+    .line 52
+    .line 53
+    invoke-virtual {v0, v3, v4, v1}, Lcom/google/android/gms/cast/internal/zzav;->a(JLcom/google/android/gms/cast/internal/zzat;)V
+
+    .line 54
+    .line 55
+    .line 56
+    return-void
+.end method

@@ -1,0 +1,25 @@
+.class public interface abstract Lcom/mycompany/app/web/WebEmgTask$EmgTaskListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mycompany/app/web/WebEmgTask;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "EmgTaskListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract b()V
+.end method
+
+.method public abstract c(Ljava/util/ArrayList;IILjava/lang/String;)V
+.end method

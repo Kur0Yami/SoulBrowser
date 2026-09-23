@@ -1,0 +1,48 @@
+=== Information
+- APK path: /app/com.mycompany.app.soulbrowser.apk
+- APK sum: 304cbcfd3f1d525898d25ab5d607f78b45c5a5e5554f244b9852a8c0be3b2526
+- App version: 1.4.85
+- App version code: 485
+- App UID: 575EDCD359B37D61800102E10CCCA40E804DA032
+- App name: Soul
+- App package: com.mycompany.app.soulbrowser
+- App permissions: 27
+    - android.permission.ACCESS_ADSERVICES_AD_ID
+    - android.permission.ACCESS_ADSERVICES_ATTRIBUTION
+    - android.permission.ACCESS_ADSERVICES_TOPICS
+    - android.permission.ACCESS_COARSE_LOCATION
+    - android.permission.ACCESS_FINE_LOCATION
+    - android.permission.ACCESS_NETWORK_STATE
+    - android.permission.ACCESS_WIFI_STATE
+    - android.permission.CAMERA
+    - android.permission.CHANGE_WIFI_STATE
+    - android.permission.FOREGROUND_SERVICE
+    - android.permission.FOREGROUND_SERVICE_DATA_SYNC
+    - android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED
+    - android.permission.INTERNET
+    - android.permission.MODIFY_AUDIO_SETTINGS
+    - android.permission.POST_NOTIFICATIONS
+    - android.permission.QUERY_ALL_PACKAGES
+    - android.permission.READ_EXTERNAL_STORAGE
+    - android.permission.RECORD_AUDIO
+    - android.permission.REQUEST_INSTALL_PACKAGES
+    - android.permission.SET_WALLPAPER
+    - android.permission.USE_BIOMETRIC
+    - android.permission.USE_FINGERPRINT
+    - android.permission.WAKE_LOCK
+    - com.android.launcher.permission.INSTALL_SHORTCUT
+    - com.android.vending.BILLING
+    - com.google.android.gms.permission.AD_ID
+    - com.mycompany.app.soulbrowser.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+- App libraries:
+    - org.apache.http.legacy
+    - android.ext.adservices
+- Certificates: 1
+    - Issuer: Common Name: Android, Organizational Unit: Android, Organization: Google Inc., Locality: Mountain View, State/Province: California, Country: US 
+Subject: Common Name: Android, Organizational Unit: Android, Organization: Google Inc., Locality: Mountain View, State/Province: California, Country: US 
+Fingerprint: c809d4bac1d44d28e4de93762d574fbb78f4c9f1 
+Serial: 327265639546632389778795388282671858858488397997
+=== Found trackers: 3
+ - Google Firebase Analytics
+ - Google AdMob
+ - OpenTelemetry (OpenCensus, OpenTracing)

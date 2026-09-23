@@ -1,0 +1,34 @@
+package com.google.android.gms.internal.consent_sdk;
+
+/* loaded from: classes.dex */
+public final class zzkw extends zzqm implements zzrr {
+    private static final zzkw zzb;
+    private zzqq zzd = zzqn.i;
+
+    static {
+        zzkw zzkwVar = new zzkw();
+        zzb = zzkwVar;
+        zzqm.l(zzkw.class, zzkwVar);
+    }
+
+    @Override // com.google.android.gms.internal.consent_sdk.zzqm
+    public final Object f(int i) {
+        int i2 = i - 1;
+        if (i2 != 0) {
+            if (i2 != 2) {
+                if (i2 != 3) {
+                    if (i2 != 4) {
+                        if (i2 == 5) {
+                            return zzb;
+                        }
+                        throw null;
+                    }
+                    return new zzqj(zzb);
+                }
+                return new zzkw();
+            }
+            return new zzrz(zzb, "\u0004\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001ࠬ", new Object[]{"zzd", zzkv.f10040a});
+        }
+        return (byte) 1;
+    }
+}

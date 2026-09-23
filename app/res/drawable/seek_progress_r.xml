@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:height="2dp"
+        android:gravity="center_vertical"
+        android:drawable="@drawable/seek_bg_r" />
+    <item
+        android:id="@android:id/progress"
+        android:height="2dp"
+        android:gravity="center_vertical">
+        <clip android:drawable="@drawable/seek_prog_r" />
+    </item>
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:height="2dp"
+        android:gravity="center_vertical">
+        <clip android:drawable="@drawable/seek_prog_r" />
+    </item>
+</layer-list>

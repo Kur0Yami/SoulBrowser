@@ -1,0 +1,47 @@
+package androidx.core.view;
+
+import android.view.View;
+import android.view.ViewGroup;
+import com.google.android.gms.ads.RequestConfiguration;
+import java.util.Iterator;
+import kotlin.Metadata;
+import kotlin.jvm.internal.markers.KMutableIterator;
+
+@Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010)\n\u0002\u0018\u0002\n\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001¨\u0006\u0003"}, d2 = {"androidx/core/view/ViewGroupKt$iterator$1", RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED, "Landroid/view/View;", "core-ktx_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class ViewGroupKt$iterator$1 implements Iterator<View>, KMutableIterator {
+
+    /* renamed from: c, reason: collision with root package name */
+    public int f805c;
+    public final /* synthetic */ ViewGroup f;
+
+    public ViewGroupKt$iterator$1(ViewGroup viewGroup) {
+        this.f = viewGroup;
+    }
+
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        if (this.f805c < this.f.getChildCount()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override // java.util.Iterator
+    public final View next() {
+        int i = this.f805c;
+        this.f805c = i + 1;
+        View childAt = this.f.getChildAt(i);
+        if (childAt != null) {
+            return childAt;
+        }
+        throw new IndexOutOfBoundsException();
+    }
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        int i = this.f805c - 1;
+        this.f805c = i;
+        this.f.removeViewAt(i);
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@null" android:enabled="true" android:shortcutId="shortcut_tab_normal" android:shortcutShortLabel="@string/new_url" android:shortcutLongLabel="@string/new_url" android:shortcutDisabledMessage="@string/fail">
+        <intent android:targetPackage="net.kaki87.soul2.testing" android:action="net.kaki87.soul2.testing.ACTION_TAB_NORMAL" android:targetClass="com.mycompany.app.web.WebShortTab" />
+    </shortcut>
+    <shortcut android:icon="@null" android:enabled="true" android:shortcutId="shortcut_tab_secret" android:shortcutShortLabel="@string/secret_tab" android:shortcutLongLabel="@string/secret_tab" android:shortcutDisabledMessage="@string/fail">
+        <intent android:targetPackage="net.kaki87.soul2.testing" android:action="net.kaki87.soul2.testing.ACTION_TAB_SECRET" android:targetClass="com.mycompany.app.web.WebShortTab" />
+    </shortcut>
+</shortcuts>

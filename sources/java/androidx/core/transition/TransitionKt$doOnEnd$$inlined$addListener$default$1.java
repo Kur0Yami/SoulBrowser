@@ -1,0 +1,31 @@
+package androidx.core.transition;
+
+import android.transition.Transition;
+import kotlin.Metadata;
+import kotlin.jvm.internal.SourceDebugExtension;
+
+@Metadata(d1 = {"\u0000\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000*\u0001\u0000\b\n\u0018\u00002\u00020\u0001¨\u0006\u0002¸\u0006\u0000"}, d2 = {"androidx/core/transition/TransitionKt$addListener$listener$1", "Landroid/transition/Transition$TransitionListener;", "core-ktx_release"}, k = 1, mv = {1, 8, 0}, xi = 176)
+@SourceDebugExtension({"SMAP\nTransition.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$listener$1\n+ 2 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$4\n+ 3 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$5\n+ 4 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$3\n+ 5 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$2\n*L\n1#1,64:1\n51#2:65\n52#3:66\n50#4:67\n49#5:68\n*E\n"})
+/* loaded from: classes.dex */
+public final class TransitionKt$doOnEnd$$inlined$addListener$default$1 implements Transition.TransitionListener {
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionCancel(Transition transition) {
+    }
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionEnd(Transition transition) {
+        throw null;
+    }
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionPause(Transition transition) {
+    }
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionResume(Transition transition) {
+    }
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionStart(Transition transition) {
+    }
+}

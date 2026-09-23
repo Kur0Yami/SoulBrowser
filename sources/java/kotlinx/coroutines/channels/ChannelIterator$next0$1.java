@@ -1,0 +1,40 @@
+package kotlinx.coroutines.channels;
+
+import java.util.NoSuchElementException;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.jvm.internal.IntCompanionObject;
+
+@Metadata(k = 3, mv = {1, 9, 0}, xi = 48)
+@DebugMetadata(c = "kotlinx.coroutines.channels.ChannelIterator$DefaultImpls", f = "Channel.kt", i = {0}, l = {599}, m = "next", n = {"$this"}, s = {"L$0"})
+/* loaded from: classes4.dex */
+final class ChannelIterator$next0$1<E> extends ContinuationImpl {
+
+    /* renamed from: c, reason: collision with root package name */
+    public /* synthetic */ Object f21633c;
+    public int f;
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        this.f21633c = obj;
+        this.f = (this.f | IntCompanionObject.MIN_VALUE) - IntCompanionObject.MIN_VALUE;
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int i = this.f;
+        if (i != 0) {
+            if (i == 1) {
+                ResultKt.throwOnFailure(obj);
+                if (((Boolean) obj).booleanValue()) {
+                    throw null;
+                }
+                throw new NoSuchElementException("Channel was closed");
+            }
+            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+        }
+        ResultKt.throwOnFailure(obj);
+        this.f = 1;
+        throw null;
+    }
+}

@@ -1,0 +1,22 @@
+.class public interface abstract Lcom/mycompany/app/dialog/DialogEditShort$EditShortListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mycompany/app/dialog/DialogEditShort;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "EditShortListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract getIcon()Landroid/graphics/Bitmap;
+.end method

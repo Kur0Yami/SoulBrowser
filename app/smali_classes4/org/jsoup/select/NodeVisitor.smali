@@ -1,0 +1,19 @@
+.class public interface abstract Lorg/jsoup/select/NodeVisitor;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Ljava/lang/FunctionalInterface;
+.end annotation
+
+
+# virtual methods
+.method public abstract head(Lorg/jsoup/nodes/Node;I)V
+.end method
+
+.method public abstract tail(Lorg/jsoup/nodes/Node;I)V
+.end method
+
+.method public abstract traverse(Lorg/jsoup/nodes/Node;)V
+.end method

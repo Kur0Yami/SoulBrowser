@@ -1,0 +1,32 @@
+package com.google.android.gms.auth.blockstore.restorecredential.internal;
+
+import android.os.IInterface;
+import android.os.Parcel;
+import com.google.android.gms.auth.blockstore.restorecredential.GetRestoreCredentialResponse;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.api.internal.TaskUtil;
+import com.google.android.gms.internal.auth_blockstore.zzb;
+import com.google.android.gms.internal.auth_blockstore.zzc;
+import com.google.android.gms.tasks.TaskCompletionSource;
+import kotlin.jvm.internal.Intrinsics;
+
+/* loaded from: classes.dex */
+public interface IGetRestoreCredentialCallback extends IInterface {
+
+    /* loaded from: classes.dex */
+    public static abstract class Stub extends zzb implements IGetRestoreCredentialCallback {
+        @Override // com.google.android.gms.internal.auth_blockstore.zzb
+        public final boolean I1(int i, Parcel parcel) {
+            if (i == 1) {
+                Status status = (Status) zzc.a(parcel, Status.CREATOR);
+                GetRestoreCredentialResponse response = (GetRestoreCredentialResponse) zzc.a(parcel, GetRestoreCredentialResponse.CREATOR);
+                zzb.f2(parcel);
+                Intrinsics.checkNotNullParameter(status, "status");
+                Intrinsics.checkNotNullParameter(response, "response");
+                TaskUtil.setResultOrApiException(status, response, (TaskCompletionSource<GetRestoreCredentialResponse>) ((InternalRestoreCredentialClient$getRestoreCredential$1$callback$1) this).f3415c);
+                return true;
+            }
+            return false;
+        }
+    }
+}

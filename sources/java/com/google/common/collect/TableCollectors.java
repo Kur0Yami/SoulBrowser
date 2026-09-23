@@ -1,0 +1,33 @@
+package com.google.common.collect;
+
+import com.google.common.annotations.GwtCompatible;
+import com.google.common.collect.Tables;
+
+@GwtCompatible
+@IgnoreJRERequirement
+/* loaded from: classes3.dex */
+final class TableCollectors {
+
+    /* loaded from: classes3.dex */
+    public static final class ImmutableTableCollectorState<R, C, V> {
+    }
+
+    @IgnoreJRERequirement
+    /* loaded from: classes3.dex */
+    public static final class MutableCell<R, C, V> extends Tables.AbstractCell<R, C, V> {
+        @Override // com.google.common.collect.Table.Cell
+        public final Object a() {
+            return null;
+        }
+
+        @Override // com.google.common.collect.Table.Cell
+        public final Object b() {
+            return null;
+        }
+
+        @Override // com.google.common.collect.Table.Cell
+        public final Object getValue() {
+            return null;
+        }
+    }
+}

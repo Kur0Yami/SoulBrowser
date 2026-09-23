@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:icon="0x7f080465"
+        android:enabled="true"
+        android:shortcutId="shortcut_tab_normal"
+        android:shortcutShortLabel="@string/new_url"
+        android:shortcutLongLabel="@string/new_url"
+        android:shortcutDisabledMessage="@string/fail">
+        <intent
+            android:targetPackage="com.mycompany.app.soulbrowser"
+            android:action="com.mycompany.app.soulbrowser.ACTION_TAB_NORMAL"
+            android:targetClass="com.mycompany.app.web.WebShortTab"/>
+    </shortcut>
+    <shortcut
+        android:icon="0x7f080466"
+        android:enabled="true"
+        android:shortcutId="shortcut_tab_secret"
+        android:shortcutShortLabel="@string/secret_tab"
+        android:shortcutLongLabel="@string/secret_tab"
+        android:shortcutDisabledMessage="@string/fail">
+        <intent
+            android:targetPackage="com.mycompany.app.soulbrowser"
+            android:action="com.mycompany.app.soulbrowser.ACTION_TAB_SECRET"
+            android:targetClass="com.mycompany.app.web.WebShortTab"/>
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,62 @@
+package com.google.android.gms.internal.ads;
+
+import com.google.android.gms.ads.RequestConfiguration;
+
+/* loaded from: classes.dex */
+public final class zzihd extends zziar implements zzicd {
+    private static final zzihd zzh;
+    private static volatile zzick zzi;
+    private int zza;
+    private int zzb;
+    private int zze;
+    private String zzc = RequestConfiguration.MAX_AD_CONTENT_RATING_UNSPECIFIED;
+    private zziaz zzd = zzias.i;
+    private zzibd zzf = zzicn.i;
+    private zzhzl zzg = zzhzl.f;
+
+    static {
+        zzihd zzihdVar = new zzihd();
+        zzh = zzihdVar;
+        zziar.x(zzihd.class, zzihdVar);
+    }
+
+    @Override // com.google.android.gms.internal.ads.zziar
+    public final Object y(zziaq zziaqVar, zziar zziarVar) {
+        zzick zzickVar;
+        int ordinal = zziaqVar.ordinal();
+        if (ordinal != 0) {
+            if (ordinal != 2) {
+                if (ordinal != 3) {
+                    if (ordinal != 4) {
+                        if (ordinal != 5) {
+                            if (ordinal == 6) {
+                                zzick zzickVar2 = zzi;
+                                if (zzickVar2 == null) {
+                                    synchronized (zzihd.class) {
+                                        try {
+                                            zzickVar = zzi;
+                                            if (zzickVar == null) {
+                                                zzickVar = new zziam(zzh);
+                                                zzi = zzickVar;
+                                            }
+                                        } catch (Throwable th) {
+                                            throw th;
+                                        }
+                                    }
+                                    return zzickVar;
+                                }
+                                return zzickVar2;
+                            }
+                            throw null;
+                        }
+                        return zzh;
+                    }
+                    return new zzial(zzh);
+                }
+                return new zzihd();
+            }
+            return new zzico(zzh, "\u0001\u0006\u0000\u0001\u0001\u0007\u0006\u0000\u0002\u0000\u0001င\u0000\u0002ဈ\u0001\u0003\u0016\u0005င\u0002\u0006\u001b\u0007ည\u0003", new Object[]{"zza", "zzb", "zzc", "zzd", "zze", "zzf", zzihb.class, "zzg"});
+        }
+        return (byte) 1;
+    }
+}

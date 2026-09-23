@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="400" android:drawable="@drawable/baseline_file_download_white_24_00" />
+    <item android:duration="400" android:drawable="@drawable/baseline_file_download_white_24_01" />
+    <item android:duration="400" android:drawable="@drawable/baseline_file_download_white_24_02" />
+    <item android:duration="400" android:drawable="@drawable/baseline_file_download_white_24_03" />
+    <item android:duration="400" android:drawable="@drawable/baseline_file_download_white_24" />
+</animation-list>

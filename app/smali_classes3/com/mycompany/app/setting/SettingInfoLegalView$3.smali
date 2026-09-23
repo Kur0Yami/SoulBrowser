@@ -1,0 +1,88 @@
+.class Lcom/mycompany/app/setting/SettingInfoLegalView$3;
+.super Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic a:Lcom/mycompany/app/setting/SettingInfoLegalView;
+
+
+# direct methods
+.method public constructor <init>(Lcom/mycompany/app/setting/SettingInfoLegalView;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lcom/mycompany/app/setting/SettingInfoLegalView$3;->a:Lcom/mycompany/app/setting/SettingInfoLegalView;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 0
+
+    .line 1
+    iget-object p1, p0, Lcom/mycompany/app/setting/SettingInfoLegalView$3;->a:Lcom/mycompany/app/setting/SettingInfoLegalView;
+
+    .line 2
+    .line 3
+    iget-object p2, p1, Lcom/mycompany/app/setting/SettingActivity;->L1:Lcom/mycompany/app/view/MyRecyclerView;
+
+    .line 4
+    .line 5
+    if-nez p2, :cond_0
+
+    .line 6
+    .line 7
+    return-void
+
+    .line 8
+    :cond_0
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result p2
+
+    .line 12
+    iget p3, p1, Lcom/mycompany/app/setting/SettingActivity;->O1:I
+
+    .line 13
+    .line 14
+    if-le p2, p3, :cond_1
+
+    .line 15
+    .line 16
+    iget-object p1, p1, Lcom/mycompany/app/setting/SettingActivity;->L1:Lcom/mycompany/app/view/MyRecyclerView;
+
+    .line 17
+    .line 18
+    invoke-virtual {p1}, Lcom/mycompany/app/view/MyRecyclerView;->w0()V
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
+
+    .line 22
+    :cond_1
+    iget-object p1, p1, Lcom/mycompany/app/setting/SettingActivity;->L1:Lcom/mycompany/app/view/MyRecyclerView;
+
+    .line 23
+    .line 24
+    invoke-virtual {p1}, Lcom/mycompany/app/view/MyRecyclerView;->r0()V
+
+    .line 25
+    .line 26
+    .line 27
+    return-void
+.end method

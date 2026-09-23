@@ -1,0 +1,36 @@
+package com.google.android.material.sidesheet;
+
+import androidx.annotation.RestrictTo;
+import com.google.android.material.motion.MaterialBackHandler;
+import com.google.android.material.sidesheet.SheetCallback;
+import com.google.android.material.sidesheet.SideSheetDialog;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* loaded from: classes3.dex */
+interface Sheet<C extends SheetCallback> extends MaterialBackHandler {
+
+    @Retention(RetentionPolicy.SOURCE)
+    @RestrictTo
+    /* loaded from: classes3.dex */
+    public @interface SheetEdge {
+    }
+
+    @Retention(RetentionPolicy.SOURCE)
+    @RestrictTo
+    /* loaded from: classes3.dex */
+    public @interface SheetState {
+    }
+
+    @Retention(RetentionPolicy.SOURCE)
+    @RestrictTo
+    /* loaded from: classes3.dex */
+    public @interface StableSheetState {
+    }
+
+    void a(SideSheetDialog.AnonymousClass1 anonymousClass1);
+
+    void e(int i);
+
+    int getState();
+}

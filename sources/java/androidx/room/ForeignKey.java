@@ -1,0 +1,17 @@
+package androidx.room;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* JADX WARN: Method from annotation default annotation not found: deferred */
+/* JADX WARN: Method from annotation default annotation not found: onDelete */
+/* JADX WARN: Method from annotation default annotation not found: onUpdate */
+@Retention(RetentionPolicy.CLASS)
+/* loaded from: classes.dex */
+public @interface ForeignKey {
+
+    @Retention(RetentionPolicy.CLASS)
+    /* loaded from: classes.dex */
+    public @interface Action {
+    }
+}

@@ -1,0 +1,112 @@
+.class public abstract Lcom/google/common/collect/ForwardingTable;
+.super Lcom/google/common/collect/ForwardingObject;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/common/collect/Table;
+
+
+# annotations
+.annotation build Lcom/google/common/annotations/GwtCompatible;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<R:",
+        "Ljava/lang/Object;",
+        "C:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/google/common/collect/ForwardingObject;",
+        "Lcom/google/common/collect/Table<",
+        "TR;TC;TV;>;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public B()Ljava/util/Map;
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    throw v0
+.end method
+
+.method public bridge synthetic e0()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 1
+    if-ne p1, p0, :cond_0
+
+    .line 2
+    .line 3
+    const/4 p1, 0x1
+
+    .line 4
+    return p1
+
+    .line 5
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 6
+    throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    throw v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    throw v0
+.end method
+
+.method public u()Ljava/util/Set;
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    throw v0
+.end method

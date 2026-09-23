@@ -1,0 +1,209 @@
+.class public Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+.super Lcom/google/api/client/auth/oauth2/TokenRequest;
+.source "SourceFile"
+
+
+# instance fields
+.field private refreshToken:Ljava/lang/String;
+    .annotation runtime Lcom/google/api/client/util/Key;
+        value = "refresh_token"
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/api/client/http/HttpTransport;Lcom/google/api/client/json/JsonFactory;Lcom/google/api/client/http/GenericUrl;Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    const-string v0, "refresh_token"
+
+    .line 2
+    .line 3
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/api/client/auth/oauth2/TokenRequest;-><init>(Lcom/google/api/client/http/HttpTransport;Lcom/google/api/client/json/JsonFactory;Lcom/google/api/client/http/GenericUrl;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-virtual {p0, p4}, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;->setRefreshToken(Ljava/lang/String;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getRefreshToken()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;->refreshToken:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public set(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+    .locals 0
+
+    .line 3
+    invoke-super {p0, p1, p2}, Lcom/google/api/client/auth/oauth2/TokenRequest;->set(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/auth/oauth2/TokenRequest;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+
+    return-object p1
+.end method
+
+.method public bridge synthetic set(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/auth/oauth2/TokenRequest;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;->set(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic set(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/util/GenericData;
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0, p1, p2}, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;->set(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setClientAuthentication(Lcom/google/api/client/http/HttpExecuteInterceptor;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/google/api/client/auth/oauth2/TokenRequest;->clientAuthentication:Lcom/google/api/client/http/HttpExecuteInterceptor;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public setGrantType(Ljava/lang/String;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+    .locals 0
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/google/api/client/auth/oauth2/TokenRequest;->setGrantType(Ljava/lang/String;)Lcom/google/api/client/auth/oauth2/TokenRequest;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic setGrantType(Ljava/lang/String;)Lcom/google/api/client/auth/oauth2/TokenRequest;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;->setGrantType(Ljava/lang/String;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setRefreshToken(Ljava/lang/String;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+    .locals 0
+
+    .line 1
+    invoke-static {p1}, Lcom/google/api/client/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p1
+
+    .line 5
+    check-cast p1, Ljava/lang/String;
+
+    .line 6
+    .line 7
+    iput-object p1, p0, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;->refreshToken:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    return-object p0
+.end method
+
+.method public setRequestInitializer(Lcom/google/api/client/http/HttpRequestInitializer;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/google/api/client/auth/oauth2/TokenRequest;->requestInitializer:Lcom/google/api/client/http/HttpRequestInitializer;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public setResponseClass(Ljava/lang/Class;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "+",
+            "Lcom/google/api/client/auth/oauth2/TokenResponse;",
+            ">;)",
+            "Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;"
+        }
+    .end annotation
+
+    .line 2
+    iput-object p1, p0, Lcom/google/api/client/auth/oauth2/TokenRequest;->responseClass:Ljava/lang/Class;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic setResponseClass(Ljava/lang/Class;)Lcom/google/api/client/auth/oauth2/TokenRequest;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;->setResponseClass(Ljava/lang/Class;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setScopes(Ljava/util/Collection;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/api/client/auth/oauth2/TokenRequest;->setScopes(Ljava/util/Collection;)Lcom/google/api/client/auth/oauth2/TokenRequest;
+
+    .line 2
+    .line 3
+    .line 4
+    return-object p0
+.end method
+
+.method public setTokenServerUrl(Lcom/google/api/client/http/GenericUrl;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+    .locals 0
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/google/api/client/auth/oauth2/TokenRequest;->setTokenServerUrl(Lcom/google/api/client/http/GenericUrl;)Lcom/google/api/client/auth/oauth2/TokenRequest;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic setTokenServerUrl(Lcom/google/api/client/http/GenericUrl;)Lcom/google/api/client/auth/oauth2/TokenRequest;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;->setTokenServerUrl(Lcom/google/api/client/http/GenericUrl;)Lcom/google/api/client/auth/oauth2/RefreshTokenRequest;
+
+    move-result-object p1
+
+    return-object p1
+.end method

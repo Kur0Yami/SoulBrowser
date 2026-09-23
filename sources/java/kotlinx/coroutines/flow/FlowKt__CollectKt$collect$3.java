@@ -1,0 +1,15 @@
+package kotlinx.coroutines.flow;
+
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.jvm.internal.SourceDebugExtension;
+
+@Metadata(d1 = {"\u0000\b\n\u0000\n\u0002\u0018\u0002\n\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00028\u00000\u0001¨\u0006\u0002"}, d2 = {"kotlinx/coroutines/flow/FlowKt__CollectKt$collect$3", "Lkotlinx/coroutines/flow/FlowCollector;", "kotlinx-coroutines-core"}, k = 1, mv = {1, 9, 0}, xi = 176)
+@SourceDebugExtension({"SMAP\nCollect.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Collect.kt\nkotlinx/coroutines/flow/FlowKt__CollectKt$collect$3\n*L\n1#1,114:1\n*E\n"})
+/* loaded from: classes4.dex */
+public final class FlowKt__CollectKt$collect$3 implements FlowCollector<Object> {
+    @Override // kotlinx.coroutines.flow.FlowCollector
+    public final Object b(Object obj, Continuation continuation) {
+        throw null;
+    }
+}

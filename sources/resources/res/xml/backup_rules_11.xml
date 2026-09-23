@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include
+        domain="database"
+        path="DbBookPay.db"/>
+    <include
+        domain="database"
+        path="DbBookPass.db"/>
+    <include
+        domain="database"
+        path="DbBookQuick.db"/>
+    <include
+        domain="database"
+        path="DbBookWeb.db"/>
+    <include
+        domain="database"
+        path="DbBookTab3.db"/>
+    <include
+        domain="database"
+        path="DbBookHistory.db"/>
+    <include
+        domain="database"
+        path="DbBookIcon.db"/>
+</full-backup-content>

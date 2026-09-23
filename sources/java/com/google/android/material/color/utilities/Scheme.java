@@ -1,0 +1,25 @@
+package com.google.android.material.color.utilities;
+
+import androidx.annotation.RestrictTo;
+import com.google.errorprone.annotations.CheckReturnValue;
+
+@CheckReturnValue
+@RestrictTo
+@Deprecated
+/* loaded from: classes3.dex */
+public class Scheme {
+    public final boolean equals(Object obj) {
+        if (this == obj || (obj instanceof Scheme)) {
+            return true;
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return System.identityHashCode(this) * 11316127;
+    }
+
+    public final String toString() {
+        return "Scheme{primary=0, onPrimary=0, primaryContainer=0, onPrimaryContainer=0, secondary=0, onSecondary=0, secondaryContainer=0, onSecondaryContainer=0, tertiary=0, onTertiary=0, tertiaryContainer=0, onTertiaryContainer=0, error=0, onError=0, errorContainer=0, onErrorContainer=0, background=0, onBackground=0, surface=0, onSurface=0, surfaceVariant=0, onSurfaceVariant=0, outline=0, outlineVariant=0, shadow=0, scrim=0, inverseSurface=0, inverseOnSurface=0, inversePrimary=0}";
+    }
+}

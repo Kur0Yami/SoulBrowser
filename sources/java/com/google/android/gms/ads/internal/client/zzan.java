@@ -1,0 +1,41 @@
+package com.google.android.gms.ads.internal.client;
+
+import android.content.Context;
+import com.google.android.gms.dynamic.ObjectWrapper;
+import com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor;
+import j$.util.Objects;
+
+/* JADX INFO: Access modifiers changed from: package-private */
+/* loaded from: classes.dex */
+public final class zzan extends zzba {
+    public final /* synthetic */ Context b;
+
+    /* renamed from: c, reason: collision with root package name */
+    public final /* synthetic */ zzr f2989c;
+    public final /* synthetic */ String d;
+    public final /* synthetic */ zzaz e;
+
+    public zzan(zzaz zzazVar, Context context, zzr zzrVar, String str) {
+        this.b = context;
+        this.f2989c = zzrVar;
+        this.d = str;
+        Objects.requireNonNull(zzazVar);
+        this.e = zzazVar;
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzba
+    public final /* bridge */ /* synthetic */ Object a() {
+        zzaz.a(this.b, "search");
+        return new zzfk();
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzba
+    public final /* synthetic */ Object b() {
+        return this.e.f3001a.zza(this.b, this.f2989c, this.d, null, 3);
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzba
+    public final Object c(zzcr zzcrVar) {
+        return zzcrVar.zzj(new ObjectWrapper(this.b), this.f2989c, this.d, ModuleDescriptor.MODULE_VERSION);
+    }
+}

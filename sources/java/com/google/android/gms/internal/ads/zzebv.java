@@ -1,0 +1,20 @@
+package com.google.android.gms.internal.ads;
+
+import com.google.common.util.concurrent.ListenableFuture;
+import java.util.concurrent.ExecutionException;
+
+/* loaded from: classes.dex */
+final /* synthetic */ class zzebv implements zzgxu {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ zzebv f6349a = new Object();
+
+    @Override // com.google.android.gms.internal.ads.zzgxu
+    public final /* synthetic */ ListenableFuture zza(Object obj) {
+        Throwable th = (ExecutionException) obj;
+        if (th.getCause() != null) {
+            th = th.getCause();
+        }
+        return zzgym.b(th);
+    }
+}

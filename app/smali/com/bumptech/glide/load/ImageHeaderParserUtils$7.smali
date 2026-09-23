@@ -1,0 +1,79 @@
+.class Lcom/bumptech/glide/load/ImageHeaderParserUtils$7;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/bumptech/glide/load/ImageHeaderParserUtils$JpegMpfReader;
+
+
+# instance fields
+.field public final synthetic a:Ljava/nio/ByteBuffer;
+
+.field public final synthetic b:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
+
+
+# direct methods
+.method public constructor <init>(Ljava/nio/ByteBuffer;Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$7;->a:Ljava/nio/ByteBuffer;
+
+    .line 5
+    .line 6
+    iput-object p2, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$7;->b:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/bumptech/glide/load/ImageHeaderParser;)Z
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$7;->a:Ljava/nio/ByteBuffer;
+
+    .line 2
+    .line 3
+    :try_start_0
+    iget-object v1, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$7;->b:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
+
+    .line 4
+    .line 5
+    invoke-interface {p1, v0, v1}, Lcom/bumptech/glide/load/ImageHeaderParser;->b(Ljava/nio/ByteBuffer;Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;)Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 9
+    invoke-static {v0}, Lcom/bumptech/glide/util/ByteBufferUtil;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    .line 10
+    .line 11
+    .line 12
+    return p1
+
+    .line 13
+    :catchall_0
+    move-exception p1
+
+    .line 14
+    invoke-static {v0}, Lcom/bumptech/glide/util/ByteBufferUtil;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    .line 15
+    .line 16
+    .line 17
+    throw p1
+.end method

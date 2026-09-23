@@ -1,0 +1,16 @@
+.class public final Lcom/google/android/gms/internal/drive/zzia;
+.super Lcom/google/android/gms/drive/metadata/internal/zzb;
+
+# interfaces
+.implements Lcom/google/android/gms/drive/metadata/SearchableMetadataField;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/drive/metadata/internal/zzb;",
+        "Lcom/google/android/gms/drive/metadata/SearchableMetadataField<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation

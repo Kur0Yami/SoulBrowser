@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="assume_strong_biometrics_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="cast_expanded_controller_default_control_buttons">
+        <item>@id/cast_button_type_closed_caption</item>
+        <item>@id/cast_button_type_skip_previous</item>
+        <item>@id/cast_button_type_skip_next</item>
+        <item>@id/cast_button_type_mute_toggle</item>
+    </array>
+    <array name="cast_mini_controller_default_control_buttons">
+        <item>@id/cast_button_type_empty</item>
+        <item>@id/cast_button_type_empty</item>
+        <item>@id/cast_button_type_play_pause_toggle</item>
+    </array>
+    <array name="crypto_fingerprint_fallback_prefixes">
+    </array>
+    <array name="crypto_fingerprint_fallback_vendors">
+        <item>samsung</item>
+    </array>
+    <array name="delay_showing_prompt_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="hide_fingerprint_instantly_prefixes">
+        <item>SM-A50</item>
+        <item>SM-G973</item>
+        <item>SM-G975</item>
+        <item>SM-G977</item>
+        <item>SM-G770</item>
+        <item>SM-N970</item>
+        <item>SM-N971</item>
+        <item>SM-N975</item>
+        <item>SM-N976</item>
+        <item>SM-N770</item>
+        <item>SC-03L</item>
+        <item>SC-04L</item>
+        <item>SC-05L</item>
+        <item>SC-01M</item>
+        <item>SCV41</item>
+        <item>SCV42</item>
+        <item>SCV45</item>
+    </array>
+    <array name="ips">
+        <item>@string/ips0</item>
+        <item>@string/ips1</item>
+        <item>@string/ips2</item>
+        <item>@string/ips3</item>
+        <item>@string/ips4</item>
+        <item>@string/ips6</item>
+        <item>@string/ips7</item>
+        <item>@string/ips8</item>
+        <item>@string/ips10</item>
+        <item>@string/ips11</item>
+        <item>@string/ips12</item>
+        <item>@string/ips13</item>
+        <item>@string/ips14</item>
+        <item>@string/ips15</item>
+        <item>@string/ips16</item>
+        <item>@string/ips17</item>
+        <item>@string/ips18</item>
+        <item>@string/ips19</item>
+    </array>
+    <array name="names">
+        <item>@string/name0</item>
+        <item>@string/name1</item>
+        <item>@string/name2</item>
+        <item>@string/name3</item>
+        <item>@string/name4</item>
+        <item>@string/name6</item>
+        <item>@string/name7</item>
+        <item>@string/name8</item>
+        <item>@string/name10</item>
+        <item>@string/name11</item>
+        <item>@string/name12</item>
+        <item>@string/name13</item>
+        <item>@string/name14</item>
+        <item>@string/name15</item>
+        <item>@string/name16</item>
+        <item>@string/name17</item>
+        <item>@string/name18</item>
+        <item>@string/name19</item>
+    </array>
+    <array name="news_code">
+        <item>id&amp;gl=ID&amp;ceid=ID:id</item>
+        <item>cs&amp;gl=CZ&amp;ceid=CZ:cs</item>
+        <item>de&amp;gl=DE&amp;ceid=DE:de</item>
+        <item>de&amp;gl=AT&amp;ceid=AT:de</item>
+        <item>de&amp;gl=CH&amp;ceid=CH:de</item>
+        <item>en-AU&amp;gl=AU&amp;ceid=AU:en</item>
+        <item>en-BW&amp;gl=BW&amp;ceid=BW:en</item>
+        <item>en-CA&amp;gl=CA&amp;ceid=CA:en</item>
+        <item>en-ET&amp;gl=ET&amp;ceid=ET:en</item>
+        <item>en-GH&amp;gl=GH&amp;ceid=GH:en</item>
+        <item>en-IN&amp;gl=IN&amp;ceid=IN:en</item>
+        <item>en-ID&amp;gl=ID&amp;ceid=ID:en</item>
+        <item>en-IE&amp;gl=IE&amp;ceid=IE:en</item>
+        <item>en-IL&amp;gl=IL&amp;ceid=IL:en</item>
+        <item>en-KE&amp;gl=KE&amp;ceid=KE:en</item>
+        <item>en-LV&amp;gl=LV&amp;ceid=LV:en</item>
+        <item>en-MY&amp;gl=MY&amp;ceid=MY:en</item>
+        <item>en-NA&amp;gl=NA&amp;ceid=NA:en</item>
+        <item>en-NZ&amp;gl=NZ&amp;ceid=NZ:en</item>
+        <item>en-NG&amp;gl=NG&amp;ceid=NG:en</item>
+        <item>en-PK&amp;gl=PK&amp;ceid=PK:en</item>
+        <item>en-PH&amp;gl=PH&amp;ceid=PH:en</item>
+        <item>en-SG&amp;gl=SG&amp;ceid=SG:en</item>
+        <item>en-ZA&amp;gl=ZA&amp;ceid=ZA:en</item>
+        <item>en-TZ&amp;gl=TZ&amp;ceid=TZ:en</item>
+        <item>en-UG&amp;gl=UG&amp;ceid=UG:en</item>
+        <item>en-GB&amp;gl=GB&amp;ceid=GB:en</item>
+        <item>en-US&amp;gl=US&amp;ceid=US:en</item>
+        <item>en-ZW&amp;gl=ZW&amp;ceid=ZW:en</item>
+        <item>es-419&amp;gl=AR&amp;ceid=AR:es-419</item>
+        <item>es-419&amp;gl=CL&amp;ceid=CL:es-419</item>
+        <item>es-419&amp;gl=CO&amp;ceid=CO:es-419</item>
+        <item>es-419&amp;gl=CU&amp;ceid=CU:es-419</item>
+        <item>es&amp;gl=ES&amp;ceid=ES:es</item>
+        <item>es-419&amp;gl=US&amp;ceid=US:es-419</item>
+        <item>es-419&amp;gl=MX&amp;ceid=MX:es-419</item>
+        <item>es-419&amp;gl=PE&amp;ceid=PE:es-419</item>
+        <item>es-419&amp;gl=VE&amp;ceid=VE:es-419</item>
+        <item>fr&amp;gl=BE&amp;ceid=BE:fr</item>
+        <item>fr-CA&amp;gl=CA&amp;ceid=CA:fr</item>
+        <item>fr&amp;gl=FR&amp;ceid=FR:fr</item>
+        <item>fr&amp;gl=MA&amp;ceid=MA:fr</item>
+        <item>fr&amp;gl=SN&amp;ceid=SN:fr</item>
+        <item>fr&amp;gl=CH&amp;ceid=CH:fr</item>
+        <item>it&amp;gl=IT&amp;ceid=IT:it</item>
+        <item>lv&amp;gl=LV&amp;ceid=LV:lv</item>
+        <item>lt&amp;gl=LT&amp;ceid=LT:lt</item>
+        <item>hu&amp;gl=HU&amp;ceid=HU:hu</item>
+        <item>nl&amp;gl=BE&amp;ceid=BE:nl</item>
+        <item>nl&amp;gl=NL&amp;ceid=NL:nl</item>
+        <item>no&amp;gl=NO&amp;ceid=NO:no</item>
+        <item>pl&amp;gl=PL&amp;ceid=PL:pl</item>
+        <item>pt-BR&amp;gl=BR&amp;ceid=BR:pt-419</item>
+        <item>pt-PT&amp;gl=PT&amp;ceid=PT:pt-150</item>
+        <item>ro&amp;gl=RO&amp;ceid=RO:ro</item>
+        <item>sk&amp;gl=SK&amp;ceid=SK:sk</item>
+        <item>sl&amp;gl=SI&amp;ceid=SI:sl</item>
+        <item>sv&amp;gl=SE&amp;ceid=SE:sv</item>
+        <item>vi&amp;gl=VN&amp;ceid=VN:vi</item>
+        <item>tr&amp;gl=TR&amp;ceid=TR:tr</item>
+        <item>el&amp;gl=GR&amp;ceid=GR:el</item>
+        <item>bg&amp;gl=BG&amp;ceid=BG:bg</item>
+        <item>ru&amp;gl=RU&amp;ceid=RU:ru</item>
+        <item>ru&amp;gl=UA&amp;ceid=UA:ru</item>
+        <item>sr&amp;gl=RS&amp;ceid=RS:sr</item>
+        <item>uk&amp;gl=UA&amp;ceid=UA:uk</item>
+        <item>he&amp;gl=IL&amp;ceid=IL:he</item>
+        <item>ar&amp;gl=AE&amp;ceid=AE:ar</item>
+        <item>ar&amp;gl=SA&amp;ceid=SA:ar</item>
+        <item>ar&amp;gl=LB&amp;ceid=LB:ar</item>
+        <item>ar&amp;gl=EG&amp;ceid=EG:ar</item>
+        <item>mr&amp;gl=IN&amp;ceid=IN:mr</item>
+        <item>hi&amp;gl=IN&amp;ceid=IN:hi</item>
+        <item>bn&amp;gl=BD&amp;ceid=BD:bn</item>
+        <item>bn&amp;gl=IN&amp;ceid=IN:bn</item>
+        <item>ta&amp;gl=IN&amp;ceid=IN:ta</item>
+        <item>te&amp;gl=IN&amp;ceid=IN:te</item>
+        <item>ml&amp;gl=IN&amp;ceid=IN:ml</item>
+        <item>th&amp;gl=TH&amp;ceid=TH:th</item>
+        <item>zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans</item>
+        <item>zh-TW&amp;gl=TW&amp;ceid=TW:zh-Hant</item>
+        <item>zh-HK&amp;gl=HK&amp;ceid=HK:zh-Hant</item>
+        <item>ja&amp;gl=JP&amp;ceid=JP:ja</item>
+        <item>ko&amp;gl=KR&amp;ceid=KR:ko</item>
+    </array>
+    <array name="news_lang">
+        <item>Bahasa Indonesia (Indonesia)</item>
+        <item>Čeština (Česko)</item>
+        <item>Deutsch (Deutschland)</item>
+        <item>Deutsch (Österreich)</item>
+        <item>Deutsch (Schweiz)</item>
+        <item>English (Australia)</item>
+        <item>English (Botswana)</item>
+        <item>English (Canada)</item>
+        <item>English (Ethiopia)</item>
+        <item>English (Ghana)</item>
+        <item>English (India)</item>
+        <item>English (Indonesia)</item>
+        <item>English (Ireland)</item>
+        <item>English (Israel)</item>
+        <item>English (Kenya)</item>
+        <item>English (Latvia)</item>
+        <item>English (Malaysia)</item>
+        <item>English (Namibia)</item>
+        <item>English (New Zealand)</item>
+        <item>English (Nigeria)</item>
+        <item>English (Pakistan)</item>
+        <item>English (Philippines)</item>
+        <item>English (Singapore)</item>
+        <item>English (South Africa)</item>
+        <item>English (Tanzania)</item>
+        <item>English (Uganda)</item>
+        <item>English (United Kingdom)</item>
+        <item>English (United States)</item>
+        <item>English (Zimbabwe)</item>
+        <item>Español (Argentina)</item>
+        <item>Español (Chile)</item>
+        <item>Español (Colombia)</item>
+        <item>Español (Cuba)</item>
+        <item>Español (España)</item>
+        <item>Español (Estados Unidos)</item>
+        <item>Español (México)</item>
+        <item>Español (Perú)</item>
+        <item>Español (Venezuela)</item>
+        <item>Français (Belgique)</item>
+        <item>Français (Canada)</item>
+        <item>Français (France)</item>
+        <item>Français (Maroc)</item>
+        <item>Français (Sénégal)</item>
+        <item>Français (Suisse)</item>
+        <item>Italiano (Italia)</item>
+        <item>Latviešu (Latvija)</item>
+        <item>Lietuvių (Lietuva)</item>
+        <item>Magyar (Magyarország)</item>
+        <item>Nederlands (België)</item>
+        <item>Nederlands (Nederland)</item>
+        <item>Norsk (Norge)</item>
+        <item>Polski (Polska)</item>
+        <item>Português (Brasil)</item>
+        <item>Português (Portugal)</item>
+        <item>Română (România)</item>
+        <item>Slovenčina (Slovensko)</item>
+        <item>Slovenščina (Slovenija)</item>
+        <item>Svenska (Sverige)</item>
+        <item>Tiếng Việt (Việt Nam)</item>
+        <item>Türkçe (Türkiye)</item>
+        <item>Ελληνικά (Ελλάδα)</item>
+        <item>Български (България)</item>
+        <item>Русский (Россия)</item>
+        <item>Русский (Украина)</item>
+        <item>Српски (Србија)</item>
+        <item>Українська (Україна)</item>
+        <item>עברית (ישראל)</item>
+        <item>العربية (الإمارات العربية المتحدة)</item>
+        <item>العربية (المملكة العربية السعودية)</item>
+        <item>العربية (لبنان)</item>
+        <item>العربية (مصر)</item>
+        <item>मराठी (भारत)</item>
+        <item>हिन्दी (भारत)</item>
+        <item>বাংলা (বাংলাদেশ)</item>
+        <item>বাংলা (ভারত)</item>
+        <item>தமிழ் (இந்தியா)</item>
+        <item>తెలుగు (భారతదేశం)</item>
+        <item>മലയാളം (ഇന്ത്യ)</item>
+        <item>ไทย (ไทย)</item>
+        <item>中文 (中国)</item>
+        <item>中文 (台灣)</item>
+        <item>中文 (香港)</item>
+        <item>日本語 (日本)</item>
+        <item>한국어 (대한민국)</item>
+    </array>
+    <array name="server_websites">
+        <item>@string/website0</item>
+        <item>@string/website1</item>
+        <item>@string/website2</item>
+        <item>@string/website3</item>
+        <item>@string/website4</item>
+        <item>@string/website6</item>
+        <item>@string/website7</item>
+        <item>@string/website8</item>
+        <item>@string/website10</item>
+        <item>@string/website11</item>
+        <item>@string/website12</item>
+        <item>@string/website13</item>
+        <item>@string/website14</item>
+        <item>@string/website15</item>
+        <item>@string/website16</item>
+        <item>@string/website17</item>
+        <item>@string/website18</item>
+        <item>@string/website19</item>
+    </array>
+    <array name="urls">
+        <item>@string/url0</item>
+        <item>@string/url1</item>
+        <item>@string/url2</item>
+        <item>@string/url3</item>
+        <item>@string/url4</item>
+        <item>@string/url6</item>
+        <item>@string/url7</item>
+        <item>@string/url8</item>
+        <item>@string/url10</item>
+        <item>@string/url11</item>
+        <item>@string/url12</item>
+        <item>@string/url13</item>
+        <item>@string/url14</item>
+        <item>@string/url15</item>
+        <item>@string/url16</item>
+        <item>@string/url17</item>
+        <item>@string/url18</item>
+        <item>@string/url19</item>
+    </array>
+</resources>

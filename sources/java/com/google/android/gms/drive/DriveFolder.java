@@ -1,0 +1,17 @@
+package com.google.android.gms.drive;
+
+import com.google.android.gms.common.api.Result;
+
+/* loaded from: classes.dex */
+public interface DriveFolder extends DriveResource {
+
+    @Deprecated
+    /* loaded from: classes.dex */
+    public interface DriveFileResult extends Result {
+    }
+
+    @Deprecated
+    /* loaded from: classes.dex */
+    public interface DriveFolderResult extends Result {
+    }
+}

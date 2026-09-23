@@ -1,0 +1,58 @@
+package com.google.android.gms.internal.ads;
+
+/* loaded from: classes.dex */
+public final class zzfor extends zziar implements zzicd {
+    private static final zzfor zze;
+    private static volatile zzick zzf;
+    private int zza;
+    private boolean zzb;
+    private boolean zzc;
+    private boolean zzd;
+
+    /* JADX WARN: Type inference failed for: r0v0, types: [com.google.android.gms.internal.ads.zziar, com.google.android.gms.internal.ads.zzfor] */
+    static {
+        ?? zziarVar = new zziar();
+        zze = zziarVar;
+        zziar.x(zzfor.class, zziarVar);
+    }
+
+    @Override // com.google.android.gms.internal.ads.zziar
+    public final Object y(zziaq zziaqVar, zziar zziarVar) {
+        zzick zzickVar;
+        int ordinal = zziaqVar.ordinal();
+        if (ordinal != 0) {
+            if (ordinal != 2) {
+                if (ordinal != 3) {
+                    if (ordinal != 4) {
+                        if (ordinal != 5) {
+                            if (ordinal == 6) {
+                                zzick zzickVar2 = zzf;
+                                if (zzickVar2 == null) {
+                                    synchronized (zzfor.class) {
+                                        try {
+                                            zzickVar = zzf;
+                                            if (zzickVar == null) {
+                                                zzickVar = new zziam(zze);
+                                                zzf = zzickVar;
+                                            }
+                                        } catch (Throwable th) {
+                                            throw th;
+                                        }
+                                    }
+                                    return zzickVar;
+                                }
+                                return zzickVar2;
+                            }
+                            throw null;
+                        }
+                        return zze;
+                    }
+                    return new zzial(zze);
+                }
+                return new zziar();
+            }
+            return new zzico(zze, "\u0004\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0004\u0002\u0007\u0003\u0007\u0004\u0007", new Object[]{"zza", "zzb", "zzc", "zzd"});
+        }
+        return (byte) 1;
+    }
+}

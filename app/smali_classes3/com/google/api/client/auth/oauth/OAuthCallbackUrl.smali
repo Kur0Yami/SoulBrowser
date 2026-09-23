@@ -1,0 +1,22 @@
+.class public Lcom/google/api/client/auth/oauth/OAuthCallbackUrl;
+.super Lcom/google/api/client/http/GenericUrl;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Lcom/google/api/client/util/Beta;
+.end annotation
+
+
+# instance fields
+.field public token:Ljava/lang/String;
+    .annotation runtime Lcom/google/api/client/util/Key;
+        value = "oauth_token"
+    .end annotation
+.end field
+
+.field public verifier:Ljava/lang/String;
+    .annotation runtime Lcom/google/api/client/util/Key;
+        value = "oauth_verifier"
+    .end annotation
+.end field

@@ -1,0 +1,108 @@
+.class final Lcom/google/android/gms/common/api/internal/zau;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zax;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/common/api/internal/zax;)V
+    .locals 0
+
+    .line 1
+    invoke-static {p1}, Lj$/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zau;->zaa:Lcom/google/android/gms/common/api/internal/zax;
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zau;->zaa:Lcom/google/android/gms/common/api/internal/zax;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zax;->zay()Ljava/util/concurrent/locks/Lock;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    .line 8
+    .line 9
+    .line 10
+    :try_start_0
+    invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zax;->zao()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 11
+    .line 12
+    .line 13
+    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zau;->zaa:Lcom/google/android/gms/common/api/internal/zax;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zax;->zay()Ljava/util/concurrent/locks/Lock;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 20
+    .line 21
+    .line 22
+    return-void
+
+    .line 23
+    :catchall_0
+    move-exception v0
+
+    .line 24
+    iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zau;->zaa:Lcom/google/android/gms/common/api/internal/zax;
+
+    .line 25
+    .line 26
+    invoke-virtual {v1}, Lcom/google/android/gms/common/api/internal/zax;->zay()Ljava/util/concurrent/locks/Lock;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v1
+
+    .line 30
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 31
+    .line 32
+    .line 33
+    throw v0
+.end method

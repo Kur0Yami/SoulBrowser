@@ -1,0 +1,39 @@
+=== Information
+- APK path: /app/soul-browser-2.0.0-rc.7-2000007.apk
+- APK sum: 6b599384f78ecefaba1e7d32cb70ddb590d29526245063d3d32c3e2a92258775
+- App version: 2.0.0-rc.7
+- App version code: 2000007
+- App UID: 91DED14CF40849E27C614F4E2A9F1624D24A3229
+- App name: Soul2⁺ Browser
+- App package: net.kaki87.soul2
+- App permissions: 22
+    - android.permission.ACCESS_COARSE_LOCATION
+    - android.permission.ACCESS_FINE_LOCATION
+    - android.permission.ACCESS_NETWORK_STATE
+    - android.permission.ACCESS_WIFI_STATE
+    - android.permission.CAMERA
+    - android.permission.CHANGE_WIFI_STATE
+    - android.permission.FOREGROUND_SERVICE
+    - android.permission.FOREGROUND_SERVICE_DATA_SYNC
+    - android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED
+    - android.permission.INTERNET
+    - android.permission.MODIFY_AUDIO_SETTINGS
+    - android.permission.POST_NOTIFICATIONS
+    - android.permission.QUERY_ALL_PACKAGES
+    - android.permission.READ_EXTERNAL_STORAGE
+    - android.permission.RECORD_AUDIO
+    - android.permission.REQUEST_INSTALL_PACKAGES
+    - android.permission.SET_WALLPAPER
+    - android.permission.USE_BIOMETRIC
+    - android.permission.USE_FINGERPRINT
+    - android.permission.WAKE_LOCK
+    - com.android.launcher.permission.INSTALL_SHORTCUT
+    - net.kaki87.soul2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+- App libraries:
+    - org.apache.http.legacy
+- Certificates: 1
+    - Issuer: Common Name: Soul2 Browser, Organizational Unit: Release, Organization: KaKi87, Locality: Unknown, State/Province: Unknown, Country: FR 
+Subject: Common Name: Soul2 Browser, Organizational Unit: Release, Organization: KaKi87, Locality: Unknown, State/Province: Unknown, Country: FR 
+Fingerprint: 403499d30106ebbcc943047bfda8954a0ca277e8 
+Serial: 10978092040858119933
+=== Found trackers: 0
