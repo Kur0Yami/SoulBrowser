@@ -1,4 +1,4 @@
-name: Build Soul2 APK
+name: Build SoulBrowser APK
 
 on:
   workflow_dispatch:
@@ -46,15 +46,42 @@ jobs:
           chmod +x scripts/*.sh
           ./scripts/build.sh
 
-      - name: List APK
+      - name: Show build output
         run: |
-          echo "=== APK OUTPUT ==="
+          echo "=== BUILD OUTPUT ==="
           ls -lh dist/
+          echo
           file dist/*.apk
 
-      - name: Upload APK
+      - name: Prepare final APK
+        run: |
+          mkdir -p final
+
+          FINAL_APK=$(find dist -maxdepth 1 -type f \
+            -name 'soul-browser-*.apk' \
+            ! -name '*-unsigned.apk' \
+            ! -name '*-aligned.apk' \
+            ! -name '*-merged-unsigned.apk' \
+            | head -n 1)
+
+          if [ -z "$FINAL_APK" ]; then
+            echo "ERROR: Final signed APK not found!"
+            exit 1
+          fi
+
+          echo "Final APK:"
+          echo "$FINAL_APK"
+
+          cp "$FINAL_APK" final/SoulBrowser.apk
+
+          echo
+          echo "=== FINAL APK ==="
+          ls -lh final/SoulBrowser.apk
+          file final/SoulBrowser.apk
+
+      - name: Upload final APK
         uses: actions/upload-artifact@v4
         with:
-          name: SoulBrowser-APK
-          path: dist/*.apk
+          name: SoulBrowser
+          path: final/SoulBrowser.apk
           if-no-files-found: error
