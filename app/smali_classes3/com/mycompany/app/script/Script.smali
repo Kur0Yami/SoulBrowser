@@ -1693,13 +1693,13 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "return android.onUsDownload("
+    const-string v1, "var __r = android.onUsDownload("
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", JSON.stringify(details)); };\n"
+    const-string v1, ", JSON.stringify(details)); var __e = String(__r).indexOf(\'error\') === 0; var __f = __e ? details.onerror : details.onload; if (__f && typeof unsafeWindow[__f] === \'function\') { setTimeout(function(){ unsafeWindow[__f](__e ? {error:\'not_succeeded\', details:String(__r)} : {}); }, 0); } return __r; };\n"
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
