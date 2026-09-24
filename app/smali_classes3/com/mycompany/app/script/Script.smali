@@ -96,6 +96,70 @@
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;[Lcom/mycompany/app/script/ScriptRequire;[Lcom/mycompany/app/script/ScriptResource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-direct/range {p0 .. p5}, Lcom/mycompany/app/script/ScriptCriteria;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 2
+    iput-object p6, p0, Lcom/mycompany/app/script/ScriptMetadata;->f:Ljava/lang/String;
+
+    .line 3
+    iput-object p7, p0, Lcom/mycompany/app/script/ScriptMetadata;->g:Ljava/lang/String;
+
+    .line 4
+    iput-object p8, p0, Lcom/mycompany/app/script/ScriptMetadata;->h:Ljava/lang/String;
+
+    .line 5
+    iput-object p9, p0, Lcom/mycompany/app/script/ScriptMetadata;->i:Ljava/lang/String;
+
+    .line 6
+    iput-object p10, p0, Lcom/mycompany/app/script/ScriptMetadata;->j:Ljava/lang/String;
+
+    .line 7
+    iput-object p11, p0, Lcom/mycompany/app/script/ScriptMetadata;->k:Ljava/lang/String;
+
+    .line 8
+    iput p12, p0, Lcom/mycompany/app/script/ScriptMetadata;->l:I
+
+    .line 9
+    iput-object p13, p0, Lcom/mycompany/app/script/ScriptMetadata;->m:Ljava/lang/String;
+
+    .line 10
+    iput-object p14, p0, Lcom/mycompany/app/script/ScriptMetadata;->n:[Lcom/mycompany/app/script/ScriptRequire;
+
+    .line 11
+    iput-object p15, p0, Lcom/mycompany/app/script/ScriptMetadata;->o:[Lcom/mycompany/app/script/ScriptResource;
+
+    move-object/from16 p1, p16
+
+    .line 12
+    iput-object p1, p0, Lcom/mycompany/app/script/Script;->p:Ljava/lang/String;
+
+    move-object/from16 p1, p17
+
+    .line 13
+    iput-object p1, p0, Lcom/mycompany/app/script/Script;->t:Ljava/lang/String;
+
+    move-object/from16 p1, p18
+
+    .line 14
+    iput-object p1, p0, Lcom/mycompany/app/script/Script;->u:Ljava/lang/String;
+
+    move-object/from16 p1, p19
+
+    .line 15
+    iput-object p1, p0, Lcom/mycompany/app/script/Script;->v:Ljava/lang/String;
+
+    move-object/from16 p1, p20
+
+    .line 16
+    iput-object p1, p0, Lcom/mycompany/app/script/Script;->w:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public static a(Ljava/lang/String;)Lcom/mycompany/app/script/ScriptRequire;
     .locals 8
 
