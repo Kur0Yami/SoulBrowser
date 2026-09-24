@@ -4120,6 +4120,128 @@
 .end method
 
 .method public onUsDownload(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 12
+    .annotation runtime Landroid/webkit/JavascriptInterface;
+    .end annotation
+
+    :try_start_0
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/mycompany/app/web/WebViewActivity$WebAppInterface;->b:Lcom/mycompany/app/web/WebViewActivity;
+
+    iget-object v1, v0, Lcom/mycompany/app/web/WebViewActivity;->i1:Landroid/content/Context;
+
+    move-object/from16 v2, p4
+
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v4, "url"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "name"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_url_ok
+
+    const-string v0, "error:empty url"
+
+    return-object v0
+
+    :cond_url_ok
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_name_ok
+
+    const-string v5, "download"
+
+    :cond_name_ok
+    const-string v6, "/"
+
+    const-string v7, "_"
+
+    invoke-virtual {v5, v6, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v6
+
+    new-instance v7, Landroid/app/DownloadManager$Request;
+
+    invoke-direct {v7, v6}, Landroid/app/DownloadManager$Request;-><init>(Landroid/net/Uri;)V
+
+    invoke-virtual {v7, v5}, Landroid/app/DownloadManager$Request;->setTitle(Ljava/lang/CharSequence;)Landroid/app/DownloadManager$Request;
+
+    const-string v6, "User-Agent"
+
+    const-string v8, "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+
+    invoke-virtual {v7, v6, v8}, Landroid/app/DownloadManager$Request;->addRequestHeader(Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v7, v6}, Landroid/app/DownloadManager$Request;->setNotificationVisibility(I)Landroid/app/DownloadManager$Request;
+
+    sget-object v6, Landroid/os/Environment;->DIRECTORY_DOWNLOADS:Ljava/lang/String;
+
+    invoke-virtual {v7, v6, v5}, Landroid/app/DownloadManager$Request;->setDestinationInExternalPublicDir(Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
+
+    const-string v6, "download"
+
+    invoke-virtual {v1, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/app/DownloadManager;
+
+    invoke-virtual {v6, v7}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v0, ""
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "error:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public onUsDownloadOld(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 21
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
