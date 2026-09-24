@@ -4119,6 +4119,221 @@
     return-object p1
 .end method
 
+.method public onUsDownload(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 21
+    .annotation runtime Landroid/webkit/JavascriptInterface;
+    .end annotation
+
+    iget-object v0, p0, Lcom/mycompany/app/web/WebViewActivity$WebAppInterface;->b:Lcom/mycompany/app/web/WebViewActivity;
+
+    iget-object v1, v0, Lcom/mycompany/app/web/WebViewActivity;->i1:Landroid/content/Context;
+
+    iget-object v2, v0, Lcom/mycompany/app/web/WebViewActivity;->I2:Lcom/mycompany/app/web/WebNestView;
+
+    const-string v3, ""
+
+    const-string v4, ""
+
+    const-string v5, ""
+
+    const-string v6, "download"
+
+    :try_start_0
+    new-instance v7, Lorg/json/JSONObject;
+
+    invoke-direct {v7, p4}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v8, "url"
+
+    invoke-virtual {v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v8, "name"
+
+    invoke-virtual {v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_0
+
+    move-object v6, v8
+
+    :cond_0
+    const-string v8, "onload"
+
+    invoke-virtual {v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v8, "onerror"
+
+    invoke-virtual {v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    goto/16 :goto_fail_silent
+
+    :cond_1
+    new-instance v8, Ljava/net/URL;
+
+    invoke-direct {v8, v3}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/net/HttpURLConnection;
+
+    const/16 v9, 0x7530
+
+    invoke-virtual {v8, v9}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
+
+    invoke-virtual {v8, v9}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
+
+    invoke-virtual {v8}, Ljava/net/HttpURLConnection;->connect()V
+
+    const-string v9, ""
+
+    invoke-static {v1, v9}, Lcom/mycompany/app/main/MainUtil;->K0(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_2
+
+    goto/16 :goto_fail_silent
+
+    :cond_2
+    new-instance v10, Ljava/io/File;
+
+    invoke-direct {v10, v9, v6}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v11, Ljava/io/FileOutputStream;
+
+    invoke-direct {v11, v10}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+
+    invoke-virtual {v8}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object v12
+
+    const/16 v13, 0x2000
+
+    new-array v13, v13, [B
+
+    :goto_read
+    invoke-virtual {v12, v13}, Ljava/io/InputStream;->read([B)I
+
+    move-result v14
+
+    const/4 v15, -0x1
+
+    if-eq v14, v15, :cond_3
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v11, v13, v15, v14}, Ljava/io/FileOutputStream;->write([BII)V
+
+    goto :goto_read
+
+    :cond_3
+    invoke-virtual {v11}, Ljava/io/FileOutputStream;->close()V
+
+    invoke-virtual {v12}, Ljava/io/InputStream;->close()V
+
+    invoke-virtual {v8}, Ljava/net/HttpURLConnection;->disconnect()V
+
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v14
+
+    if-nez v14, :cond_4
+
+    new-instance v14, Ljava/lang/StringBuilder;
+
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v15, "(function(){unsafeWindow."
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v15, "({});})();"
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    const/4 v15, 0x1
+
+    invoke-static {v2, v14, v15}, Lcom/mycompany/app/main/MainUtil;->I(Landroid/webkit/WebView;Ljava/lang/String;Z)V
+
+    :cond_4
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v0, ""
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_5
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "(function(){unsafeWindow."
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v8, "({error:\"download_failed\"});})();"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const/4 v8, 0x1
+
+    invoke-static {v2, v7, v8}, Lcom/mycompany/app/main/MainUtil;->I(Landroid/webkit/WebView;Ljava/lang/String;Z)V
+
+    :cond_5
+    const-string v0, ""
+
+    return-object v0
+
+    :goto_fail_silent
+    const-string v0, ""
+
+    return-object v0
+.end method
+
 .method public onVidDe2(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .annotation runtime Landroid/webkit/JavascriptInterface;
