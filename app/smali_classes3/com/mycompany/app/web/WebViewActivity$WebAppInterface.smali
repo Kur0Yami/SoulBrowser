@@ -4124,7 +4124,9 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    iget-object v0, p0, Lcom/mycompany/app/web/WebViewActivity$WebAppInterface;->b:Lcom/mycompany/app/web/WebViewActivity;
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/mycompany/app/web/WebViewActivity$WebAppInterface;->b:Lcom/mycompany/app/web/WebViewActivity;
 
     iget-object v1, v0, Lcom/mycompany/app/web/WebViewActivity;->i1:Landroid/content/Context;
 
@@ -4141,7 +4143,9 @@
     :try_start_0
     new-instance v7, Lorg/json/JSONObject;
 
-    invoke-direct {v7, p4}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    move-object/from16 v8, p4
+
+    invoke-direct {v7, v8}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     const-string v8, "url"
 
