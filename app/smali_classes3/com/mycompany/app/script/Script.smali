@@ -1763,6 +1763,31 @@
     return-object p0
 .end method
 
+.method public static connectArr(Ljava/util/HashSet;)[Ljava/lang/String;
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_empty
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Ljava/lang/String;
+
+    return-object v1
+
+    :cond_empty
+    const/4 v1, 0x0
+
+    return-object v1
+.end method
+
 .method public static c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lcom/mycompany/app/script/Script;
     .locals 38
 
@@ -4142,34 +4167,9 @@
     .line 1080
     .line 1081
     :goto_23
-    invoke-virtual/range {v37 .. v37}, Ljava/util/HashSet;->size()I
+    invoke-static/range {v37 .. v37}, Lcom/mycompany/app/script/Script;->connectArr(Ljava/util/HashSet;)[Ljava/lang/String;
 
-    move-result v0
-
-    if-lez v0, :cond_connect_empty
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    move-object/from16 v36, v37
-
-    move-object/from16 v37, v0
-
-    invoke-virtual/range {v36 .. v37}, Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    move-object/from16 v36, v0
-
-    goto :goto_connect
-
-    :cond_connect_empty
-    const/4 v0, 0x0
-
-    move-object/from16 v36, v0
-
-    :goto_connect
+    move-result-object v36
     new-instance v15, Lcom/mycompany/app/script/Script;
 
     .line 1082
