@@ -4191,7 +4191,9 @@
     :catch_c
     :cond_39
     :goto_24
-    return-object v36
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public static d(ILjava/lang/String;)I
