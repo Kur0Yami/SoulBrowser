@@ -1,0 +1,29 @@
+name: Find WebTabAdapter Usage
+
+on:
+  workflow_dispatch:
+
+jobs:
+  grep:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Search WebTabAdapter
+        run: |
+          echo "=== new WebTabAdapter ==="
+          git grep -n "new WebTabAdapter" -- '*.java' || true
+
+          echo
+          echo "=== WebTabAdapter references ==="
+          git grep -n "WebTabAdapter" -- '*.java' || true
+
+          echo
+          echo "=== WebTabListener references ==="
+          git grep -n "WebTabListener" -- '*.java' || true
+
+          echo
+          echo "=== selectionAnchor ==="
+          git grep -n "selectionAnchor" -- '*.java' || true
