@@ -1703,6 +1703,22 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    const-string v1, "var __gmP = '"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "';\nvar __gmSeq = 0;\nvar GM_xmlhttpRequest = function(details) {\nvar seq = ++__gmSeq;\nvar rt = details.responseType || '';\nvar fill = function(r) {\nif (!r || typeof r !== 'object' || r.response !== undefined || typeof r.responseText !== 'string') return;\nif (rt === 'json') { try { r.response = JSON.parse(r.responseText); } catch (e) { r.response = null; } }\nelse if (rt === 'blob' || rt === 'arraybuffer') {\nif (typeof r.responseBase64 === 'string') {\nvar bin = atob(r.responseBase64);\nvar u8 = new Uint8Array(bin.length);\nfor (var i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);\nvar ct = (String(r.responseHeaders || '').match(/content-type:\\s*([^\\r\\n;]+)/i) || [])[1] || '';\nr.response = (rt === 'blob') ? new Blob([u8], {type: ct}) : u8.buffer;\n}\n}\nelse if (rt === 'document') { try { r.response = new DOMParser().parseFromString(r.responseText, 'text/html'); } catch (e) {} }\nelse { r.response = r.responseText; }\n};\nvar fixed = {onabort:'GM_onAbortCallback', onerror:'GM_onErrorCallback', onload:'GM_onLoadCallback', onprogress:'GM_onProgressCallback', onreadystatechange:'GM_onReadyStateChange', ontimeout:'GM_onTimeoutCallback'};\nvar ufixed = {onabort:'GM_uploadOnAbortCallback', onerror:'GM_uploadOnErrorCallback', onload:'GM_uploadOnLoadCallback', onprogress:'GM_uploadOnProgressCallback'};\nvar reg = function(obj, k, isUp) {\nvar f = obj[k];\nif (typeof f !== 'function') return;\nvar w = function(r) { if (!isUp) { try { fill(r); } catch (e) {} } return f.apply(this, arguments); };\nvar n = __gmP + 'GMX' + seq + (isUp ? 'u_' : '_') + k;\nunsafeWindow[n] = w;\nunsafeWindow[__gmP + (isUp ? ufixed[k] : fixed[k])] = w;\nobj[k] = n;\n};\n['onabort','onerror','onload','onprogress','onreadystatechange','ontimeout'].forEach(function(k) { reg(details, k, false); });\nif (details.upload) { ['onabort','onerror','onload','onprogress'].forEach(function(k) { reg(details.upload, k, true); }); }\nreturn JSON.parse(android.onUsXmlHttpRequest("
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", JSON.stringify(details)));\n};\nGM.xmlhttpRequest = GM_xmlhttpRequest;\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     const-string v1, "GM.download=GM_download;\n"
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
