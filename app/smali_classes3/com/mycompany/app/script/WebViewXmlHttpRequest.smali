@@ -1396,6 +1396,21 @@
     .line 275
     move-result-object v10
 
+    iget-object v11, v0, Lcom/mycompany/app/script/WebViewXmlHttpRequest;->e:Lorg/json/JSONObject;
+
+    if-eqz v11, :cond_soulbin_skip
+
+    const-string v13, "__soulBin"
+
+    invoke-virtual {v11, v13}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_soulbin_skip
+
+    const-string v10, "ISO-8859-1"
+
+    :cond_soulbin_skip
     .line 276
     invoke-direct {v9, v5, v10}, Lcom/mycompany/app/script/UnicodeReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
     :try_end_9
