@@ -1,0 +1,143 @@
+name: Analyze Tab Grouping
+
+on:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Analyze SoulBrowser tab system
+        shell: bash
+        run: |
+          set +e
+
+          OUT="tab-analysis.txt"
+
+          echo "========================================" > "$OUT"
+          echo " SOULBROWSER TAB GROUPING ANALYSIS" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          echo >> "$OUT"
+
+          echo "REPOSITORY:" >> "$OUT"
+          git remote get-url origin >> "$OUT"
+          echo >> "$OUT"
+
+          echo "COMMIT:" >> "$OUT"
+          git rev-parse HEAD >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "1. WebTabAdapter REFERENCES" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          git grep -n -E "WebTabAdapter|WebTabListener" -- '*.java' >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "2. WebTabAdapter CREATION" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          git grep -n -E "new[[:space:]]+WebTabAdapter" -- '*.java' >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "3. SELECTION SYSTEM" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          git grep -n -E \
+            "selectionAnchor|setSelection|selected|isSelected|selectRange|selection|Check|checkbox|MyButtonCheck" \
+            -- '*.java' >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "4. GROUP SYSTEM" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          git grep -n -E \
+            "group|Group|groupId|groupName|WebTabItem|WebTabBarSubView" \
+            -- '*.java' >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "5. IMPORTANT WebTabAdapter METHODS" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          git grep -n -E \
+            "void[[:space:]]+[A-Z][A-Za-z0-9_]*\(|boolean[[:space:]]+[A-Z][A-Za-z0-9_]*\(|int[[:space:]]+[A-Z][A-Za-z0-9_]*\(|WebTabAdapter" \
+            -- '*/WebTabAdapter.java' '*WebTabAdapter.java' >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "6. METHODS CALLED ON WebTabAdapter" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          git grep -n -E \
+            "\.[A-Z][A-Za-z0-9_]*\(" \
+            -- '*.java' | grep -E "WebTab|Adapter|selection|group|Group" >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "7. TAB-RELATED ACTIVITIES / FRAGMENTS" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          find sources -type f \( -name "*.java" -o -name "*.kt" \) \
+            | grep -Ei "tab|browser|webview|activity|fragment" >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "8. EXACT FILES CONTAINING TAB CLASSES" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          find sources -type f \( -name "*.java" -o -name "*.kt" \) \
+            | grep -Ei "WebTab|TabBar|TabAdapter|TabView" >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "9. ALL TODO / FIXME AROUND TAB CODE" >> "$OUT"
+          echo "========================================" >> "$OUT"
+          git grep -n -E "TODO|FIXME|XXX" -- '*.java' '*.kt' \
+            | grep -Ei "tab|group|selection" >> "$OUT"
+          echo >> "$OUT"
+
+          echo "========================================" >> "$OUT"
+          echo "10. SOURCE CONTEXT: WebTabAdapter" >> "$OUT"
+          echo "========================================" >> "$OUT"
+
+          ADAPTER=$(find . -type f -name "WebTabAdapter.java" | head -1)
+
+          if [ -n "$ADAPTER" ]; then
+            echo "FILE: $ADAPTER" >> "$OUT"
+            echo >> "$OUT"
+
+            echo "--- CLASS / FIELDS ---" >> "$OUT"
+            grep -n -E \
+              "class WebTabAdapter|WebTabHolder|WebTabItem|WebTabListener|selectionAnchor|boolean u|List<|boolean m|List q" \
+              "$ADAPTER" >> "$OUT"
+
+            echo >> "$OUT"
+            echo "--- METHODS ---" >> "$OUT"
+            grep -n -E \
+              "^[[:space:]]*(public|private|protected|static|final|synchronized).*\\(" \
+              "$ADAPTER" >> "$OUT"
+
+            echo >> "$OUT"
+            echo "--- GROUP / SELECTION CODE ---" >> "$OUT"
+            grep -n -B 8 -A 20 -E \
+              "selectionAnchor|void M\\(|void O\\(|void X\\(|void Y\\(|boolean N\\(|int E\\(" \
+              "$ADAPTER" >> "$OUT"
+          fi
+
+          echo >> "$OUT"
+          echo "========================================" >> "$OUT"
+          echo " ANALYSIS COMPLETE" >> "$OUT"
+          echo "========================================" >> "$OUT"
+
+          echo
+          echo "===== SUMMARY ====="
+          cat "$OUT"
+
+      - name: Upload analysis result
+        uses: actions/upload-artifact@v4
+        with:
+          name: soulbrowser-tab-analysis
+          path: tab-analysis.txt
+          retention-days: 7
