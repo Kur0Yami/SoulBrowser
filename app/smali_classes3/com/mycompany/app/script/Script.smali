@@ -24,9 +24,11 @@
 
 .field public final w:Ljava/lang/String;
 
+.field public final y:[Ljava/lang/String;
+
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;[Lcom/mycompany/app/script/ScriptRequire;[Lcom/mycompany/app/script/ScriptResource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;[Lcom/mycompany/app/script/ScriptRequire;[Lcom/mycompany/app/script/ScriptResource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -86,6 +88,10 @@
 
     .line 16
     iput-object p1, p0, Lcom/mycompany/app/script/Script;->w:Ljava/lang/String;
+
+    move-object/from16 p1, p21
+
+    iput-object p1, p0, Lcom/mycompany/app/script/Script;->y:[Ljava/lang/String;
 
     return-void
 .end method
@@ -1553,6 +1559,89 @@
     .line 670
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    const-string v1, "var GM_download = function(details) { \n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "if (typeof details === \'string\') { details = { url: details, name: (arguments[1] || \'download\') }; }\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "if (details.onload) { unsafeWindow."
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "GM_downloadOnLoadCallback = details.onload;\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "details.onload = \'"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "GM_downloadOnLoadCallback\'; }\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "if (details.onerror) { unsafeWindow."
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "GM_downloadOnErrorCallback = details.onerror;\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "details.onerror = \'"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "GM_downloadOnErrorCallback\'; }\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "if (details.onprogress) { unsafeWindow."
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "GM_downloadOnProgressCallback = details.onprogress;\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "details.onprogress = \'"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "GM_downloadOnProgressCallback\'; }\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "return android.onUsDownload("
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", JSON.stringify(details)); };\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "GM.download=GM_download;\n"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+
     .line 671
     .line 672
     .line 673
@@ -1675,7 +1764,7 @@
 .end method
 
 .method public static c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lcom/mycompany/app/script/Script;
-    .locals 37
+    .locals 38
 
     .line 1
     move-object/from16 v0, p1
@@ -1819,6 +1908,10 @@
     .line 64
     .line 65
     invoke-direct {v12}, Ljava/util/HashSet;-><init>()V
+
+    new-instance v37, Ljava/util/HashSet;
+
+    invoke-direct {v37}, Ljava/util/HashSet;-><init>()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2697,6 +2790,19 @@
     goto :goto_f
 
     .line 460
+    :cond_connect
+    const-string v3, "connect"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_17
+
+    invoke-virtual {v37, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_10
+
     :cond_17
     :goto_10
     move-object/from16 v4, p2
@@ -3388,7 +3494,7 @@
     move-result v3
 
     .line 782
-    if-eqz v3, :cond_17
+    if-eqz v3, :cond_connect
 
     .line 783
     .line 784
@@ -4034,6 +4140,34 @@
     .line 1080
     .line 1081
     :goto_23
+    invoke-virtual {v37}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_connect_empty
+
+    invoke-virtual {v37}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {v37, v0}, Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/String;
+
+    move-object/from16 v36, v0
+
+    goto :goto_connect
+
+    :cond_connect_empty
+    const/4 v0, 0x0
+
+    move-object/from16 v36, v0
+
+    :goto_connect
     new-instance v15, Lcom/mycompany/app/script/Script;
 
     .line 1082
@@ -4042,7 +4176,7 @@
 
     .line 1084
     .line 1085
-    invoke-direct/range {v15 .. v35}, Lcom/mycompany/app/script/Script;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;[Lcom/mycompany/app/script/ScriptRequire;[Lcom/mycompany/app/script/ScriptResource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v15 .. v36}, Lcom/mycompany/app/script/Script;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;[Lcom/mycompany/app/script/ScriptRequire;[Lcom/mycompany/app/script/ScriptResource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_c
 
