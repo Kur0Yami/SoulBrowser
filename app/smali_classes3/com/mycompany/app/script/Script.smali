@@ -1463,6 +1463,8 @@
     .line 580
     .line 581
     .line 582
+    move-object/from16 v5, p1
+
     const-string p1, ", JSON.stringify(details))); };\n"
 
     .line 583
@@ -1695,7 +1697,7 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ", JSON.stringify(details)); };\n"
 
