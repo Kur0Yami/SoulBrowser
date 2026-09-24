@@ -1911,7 +1911,7 @@
 
     new-instance v37, Ljava/util/HashSet;
 
-    invoke-direct {v37}, Ljava/util/HashSet;-><init>()V
+    invoke-direct/range {v37 .. v37}, Ljava/util/HashSet;-><init>()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2799,7 +2799,9 @@
 
     if-eqz v3, :cond_17
 
-    invoke-virtual {v37, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    move-object/from16 v3, v37
+
+    invoke-virtual {v3, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_10
 
@@ -4140,19 +4142,19 @@
     .line 1080
     .line 1081
     :goto_23
-    invoke-virtual {v37}, Ljava/util/HashSet;->size()I
+    invoke-virtual/range {v37 .. v37}, Ljava/util/HashSet;->size()I
 
     move-result v0
 
     if-lez v0, :cond_connect_empty
 
-    invoke-virtual {v37}, Ljava/util/HashSet;->size()I
-
-    move-result v0
-
     new-array v0, v0, [Ljava/lang/String;
 
-    invoke-virtual {v37, v0}, Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    move-object/from16 v36, v37
+
+    move-object/from16 v37, v0
+
+    invoke-virtual/range {v36 .. v37}, Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
